@@ -40,13 +40,13 @@ namespace WindowsFormsApplication1
         private void button3_Click(object sender, EventArgs e)
         {
             pagePosition = 1;
-            Panel1.Location = new Point(Panel1.Location.X - ClientSize.Width, 0);
+            Panel1.Location = new Point(-ClientSize.Width, 0);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             pagePosition = 1;
-            Panel1.Location = new Point(Panel1.Location.X + ClientSize.Width, 0);
+            Panel1.Location = new Point(-ClientSize.Width, 0);
         }
 
         private void Form1_Load(object sender, EventArgs e)
