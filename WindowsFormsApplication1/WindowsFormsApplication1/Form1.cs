@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-        public int pagePosition = 1;
+        private int pagePosition = 1;
         public Form1()
         {
             InitializeComponent();
