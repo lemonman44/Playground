@@ -13,6 +13,8 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
+        //butts
+  
         private int pagePosition = 1;
         public Form1()
         {
