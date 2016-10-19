@@ -94,4 +94,5 @@ namespace WindowsFormsApplication1
             button4.Location = new Point(ClientSize.Width * 2, 0);
         }
     }
+
 }
