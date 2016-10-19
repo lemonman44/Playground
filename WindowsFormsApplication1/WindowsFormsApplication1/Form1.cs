@@ -30,6 +30,7 @@ namespace WindowsFormsApplication1
         //button is on section 1
         private void button1_Click(object sender, EventArgs e)
         {
+            Data data = new Data();
             pagePosition = 0;
             Panel1.Location = new Point(Panel1.Location.X * pagePosition, 0);
         }
