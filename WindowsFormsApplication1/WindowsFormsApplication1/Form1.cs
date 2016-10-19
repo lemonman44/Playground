@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-        //the format of the panel below, one long panel in three sections, each
+        //the format of the panel1 below, one long panel in three sections, each
         //section the size of a form
         //|-----------|-----------|-----------|
         //|     0     |     1     |     2     |
