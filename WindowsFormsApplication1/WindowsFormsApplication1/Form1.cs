@@ -25,6 +25,7 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
         //when 'compile/view' is clicked, shows section 0 of panel
         //button is on section 1
         private void button1_Click(object sender, EventArgs e)
@@ -32,6 +33,7 @@ namespace WindowsFormsApplication1
             pagePosition = 0;
             Panel1.Location = new Point(Panel1.Location.X * pagePosition, 0);
         }
+
         //when 'send data' is clicked, shows section 2 of panel 
         //button is on section 1
         private void button2_Click(object sender, EventArgs e)
@@ -39,6 +41,7 @@ namespace WindowsFormsApplication1
             pagePosition = 2;
             Panel1.Location = new Point(Panel1.Location.X * pagePosition, 0);
         }
+
         //when 'back' is clicked, shows section 1 of panel
         //button is on section 0
         private void button3_Click(object sender, EventArgs e)
@@ -46,6 +49,7 @@ namespace WindowsFormsApplication1
             pagePosition = 1;
             Panel1.Location = new Point(-ClientSize.Width, 0);
         }
+
         //when 'back2' is clicked, shows section 1 of panel
         //button is on section 2
         private void button4_Click(object sender, EventArgs e)
