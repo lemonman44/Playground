@@ -13,13 +13,16 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-        //the format of the panel below, one long panel in three sections, each
-        //section the size of a form
-        //|-----------|-----------|-----------|
-        //|     0     |     1     |     2     |
-        //|           |           |           |
-        //|-----------|-----------|-----------|
-        //the starting part of the panel when application is started is below
+        /*
+        The format of the panel below, one long panel in three sections, each
+        section the size of a form:
+        |-----------|-----------|-----------|
+        |     0     |     1     |     2     |
+        |           |           |           |
+        |-----------|-----------|-----------|
+        the starting part of the panel when application is started is below
+        */
+        
         public int pagePosition = 1;
         public Form1()
         {
