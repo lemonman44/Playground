@@ -36,7 +36,7 @@
             this.Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // button1 (compile/view)
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Location = new System.Drawing.Point(290, 254);
@@ -48,7 +48,7 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // button2 (send data)
             // 
             this.button2.Location = new System.Drawing.Point(290, 345);
             this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -59,7 +59,7 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // button3 (back)
             // 
             this.button3.Location = new System.Drawing.Point(0, 0);
             this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -82,14 +82,14 @@
             this.Panel1.Size = new System.Drawing.Size(2100, 2184);
             this.Panel1.TabIndex = 0;
             // 
-            // button4
+            // button4 (back2)
             // 
             this.button4.Location = new System.Drawing.Point(1400, 0);
             this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(50, 39);
             this.button4.TabIndex = 3;
-            this.button4.Text = "back2";
+            this.button4.Text = "Back2";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
