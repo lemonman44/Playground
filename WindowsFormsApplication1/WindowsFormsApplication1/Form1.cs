@@ -13,14 +13,19 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-        //butts
-  
+        //the format of the panel below, one long panel in three sections, each
+        //section the size of a form
+        //|-----------|-----------|-----------|
+        //|     0     |     1     |     2     |
+        //|           |           |           |
+        //|-----------|-----------|-----------|
+        //the starting part of the panel when application is started is below
         private int pagePosition = 1;
         public Form1()
         {
             InitializeComponent();
         }
-
+        //code for when button1 is pressed
         private void button1_Click(object sender, EventArgs e)
         {
             pagePosition = 0;
