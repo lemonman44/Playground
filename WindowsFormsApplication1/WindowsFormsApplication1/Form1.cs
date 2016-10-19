@@ -31,6 +31,7 @@ namespace WindowsFormsApplication1
             pagePosition = 0;
             Panel1.Location = new Point(Panel1.Location.X + ClientSize.Width, 0);
         }
+        //code for when button2 is clicked
         private void button2_Click(object sender, EventArgs e)
         {
             pagePosition = 2;
