@@ -66,7 +66,7 @@ namespace WindowsFormsApplication1
             int button1_Y = ClientSize.Height / 2 + button1.Height;
             int button2_Y = ClientSize.Height / 2 - button2.Height;
 
-            //keeps the panel the right size in comparaison to whatever the form's size is
+            //keeps the panel the right size in comparison to whatever the form's size is
             Panel1.Size = new Size(ClientSize.Width * 3, ClientSize.Height);
             //keeps the panel in the right location for when form is resized
             Panel1.Location = new Point(-ClientSize.Width * pagePosition, 0);
