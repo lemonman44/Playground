@@ -80,5 +80,10 @@ namespace WindowsFormsApplication1
             button2.Location = new Point(button2_X, button2_Y);
             button4.Location = new Point(ClientSize.Width * 2, 0);
         }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
