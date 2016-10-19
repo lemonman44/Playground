@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1
         //|           |           |           |
         //|-----------|-----------|-----------|
         //the starting part of the panel when application is started is below
-        private int pagePosition = 1;
+        private int pagePosition = 0;
         public Form1()
         {
             InitializeComponent();
@@ -29,35 +29,23 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
             pagePosition = 0;
-            button3.Visible = true;
             Panel1.Location = new Point(Panel1.Location.X + ClientSize.Width, 0);
-            button1.Visible = false;
-            button2.Visible = false;
         }
         private void button2_Click(object sender, EventArgs e)
         {
             pagePosition = 2;
-            button3.Visible = true;
             Panel1.Location = new Point(Panel1.Location.X - ClientSize.Width, 0);
-            button1.Visible = false;
-            button2.Visible = false;
         }
         private void button3_Click(object sender, EventArgs e)
         {
             pagePosition = 1;
-            button3.Visible = false;
             Panel1.Location = new Point(Panel1.Location.X - ClientSize.Width, 0);
-            button1.Visible = true;
-            button2.Visible = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             pagePosition = 1;
-            button3.Visible = false;
             Panel1.Location = new Point(Panel1.Location.X + ClientSize.Width, 0);
-            button1.Visible = true;
-            button2.Visible = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
