@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1
         //|           |           |           |
         //|-----------|-----------|-----------|
         //the starting part of the panel when application is started is below
-        private int pagePosition = 0;
+        private int pagePosition = 1;
         public Form1()
         {
             InitializeComponent();
