@@ -36,35 +36,35 @@
             this.Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1 (compile/view)
+            // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(290, 254);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(580, 488);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 71);
+            this.button1.Size = new System.Drawing.Size(244, 137);
             this.button1.TabIndex = 0;
             this.button1.Text = "Compile/View";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2 (send data)
+            // button2
             // 
-            this.button2.Location = new System.Drawing.Point(290, 345);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(580, 663);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 65);
+            this.button2.Size = new System.Drawing.Size(244, 125);
             this.button2.TabIndex = 1;
             this.button2.Text = "Send Data";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3 (back)
+            // button3
             // 
             this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(50, 39);
+            this.button3.Size = new System.Drawing.Size(100, 75);
             this.button3.TabIndex = 2;
             this.button3.Text = "Back";
             this.button3.UseVisualStyleBackColor = true;
@@ -76,18 +76,18 @@
             this.Panel1.Controls.Add(this.button3);
             this.Panel1.Controls.Add(this.button2);
             this.Panel1.Controls.Add(this.button1);
-            this.Panel1.Location = new System.Drawing.Point(-700, 0);
-            this.Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Panel1.Location = new System.Drawing.Point(-1400, 0);
+            this.Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(2100, 2184);
+            this.Panel1.Size = new System.Drawing.Size(4200, 4200);
             this.Panel1.TabIndex = 0;
             // 
-            // button4 (back2)
+            // button4
             // 
-            this.button4.Location = new System.Drawing.Point(1400, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Location = new System.Drawing.Point(2800, 0);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(50, 39);
+            this.button4.Size = new System.Drawing.Size(100, 75);
             this.button4.TabIndex = 3;
             this.button4.Text = "Back2";
             this.button4.UseVisualStyleBackColor = true;
@@ -95,12 +95,12 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 459);
+            this.ClientSize = new System.Drawing.Size(1374, 883);
             this.Controls.Add(this.Panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MinimumSize = new System.Drawing.Size(408, 434);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(790, 769);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

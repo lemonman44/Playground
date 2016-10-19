@@ -8,21 +8,22 @@ namespace WindowsFormsApplication1
 {
     class Button
     {
-        static void Main()
+        int[,] number_Storage = new int[100, 100];
+        private void setArray()
         {
             Random random = new Random();
-            int[,] number_Storage = new int[100, 100];
-            int y = 100;
-            int x = 100;
-            while (y != 0)
+          
+            for (int i = 0; i < 100; i++)
             {
-                while (x != 0)
+                for (int j = 0; j < 100; j++)
                 {
-                    number_Storage[x-1, y-1] = random.Next(1, 100);
-                    x--;
+                    number_Storage[i, j] = random.Next(1, 100);
                 }
-                y--;
             }
+        }
+        private object getArray()
+        {
+            return number_Storage;
         }
     }
 }
