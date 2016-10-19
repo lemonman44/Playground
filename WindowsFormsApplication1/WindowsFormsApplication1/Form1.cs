@@ -61,6 +61,7 @@ namespace WindowsFormsApplication1
         private void Form1_Load(object sender, EventArgs e)
         {
             //variables to hold the (x, y) location of button 1 and 2
+            //division by 2 puts the buttons into section 1
             //              width of form / 2    + width of form    - button width / 2
             int button1_X = ClientSize.Width / 2 + ClientSize.Width + button1.Width;
             int button2_X = ClientSize.Width / 2 + ClientSize.Width + button2.Width;
@@ -80,6 +81,7 @@ namespace WindowsFormsApplication1
         private void Form1_SizeChanged(object sender, EventArgs e)
         {
             //variables to hold the (x, y) location of button 1 and 2
+            //division by 2 puts buttons into section 1
             //              width of form / 2    + width of form    - button width / 2
             int button1_X = ClientSize.Width / 2 + ClientSize.Width + button1.Width;
             int button2_X = ClientSize.Width / 2 + ClientSize.Width + button2.Width;
