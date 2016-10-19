@@ -62,8 +62,8 @@ namespace WindowsFormsApplication1
         {
             //variables to hold the (x, y) location of button 1 and 2
             //              width of form / 2    + width of form    - button width / 2
-            int button1_X = ClientSize.Width / 2 + ClientSize.Width - button1.Width / 2;
-            int button2_X = ClientSize.Width / 2 + ClientSize.Width - button2.Width / 2;
+            int button1_X = ClientSize.Width / 2 + ClientSize.Width + button1.Width;
+            int button2_X = ClientSize.Width / 2 + ClientSize.Width + button2.Width;
             int button1_Y = ClientSize.Height / 2 + button1.Height;
             int button2_Y = ClientSize.Height / 2 - button2.Height;
 
@@ -81,8 +81,8 @@ namespace WindowsFormsApplication1
         {
             //variables to hold the (x, y) location of button 1 and 2
             //              width of form / 2    + width of form    - button width / 2
-            int button1_X = ClientSize.Width / 2 + ClientSize.Width - button1.Width / 2;
-            int button2_X = ClientSize.Width / 2 + ClientSize.Width - button2.Width / 2;
+            int button1_X = ClientSize.Width / 2 + ClientSize.Width + button1.Width;
+            int button2_X = ClientSize.Width / 2 + ClientSize.Width + button2.Width;
             int button1_Y = ClientSize.Height / 2 + button1.Height;
             int button2_Y = ClientSize.Height / 2 - button2.Height;
 
