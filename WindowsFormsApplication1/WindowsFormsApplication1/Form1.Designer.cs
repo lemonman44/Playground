@@ -305,6 +305,7 @@
             this.dataGridView1.RowTemplate.Height = 33;
             this.dataGridView1.Size = new System.Drawing.Size(822, 302);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.DoubleBuffered(true);
             // 
             // Column1
             // 
