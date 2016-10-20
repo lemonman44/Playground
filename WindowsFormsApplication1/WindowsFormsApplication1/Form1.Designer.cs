@@ -300,7 +300,6 @@
             this.Column98,
             this.Column99,
             this.Column100});
-            //this.dataGridView1.Rows.Add(100);
             this.dataGridView1.Location = new System.Drawing.Point(1615, 323);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 33;

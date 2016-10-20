@@ -74,13 +74,18 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            dataGridView1.Size = new Size(ClientSize.Width / 2, ClientSize.Height / 2);
+
             //variables to hold the (x, y) location of button 1 and 2
             //division by 2 puts the buttons into section 1
             //              width of form / 2    + width of form    - button width / 2
             int button1_X = ClientSize.Width / 2 + ClientSize.Width + button1.Width;
             int button2_X = ClientSize.Width / 2 + ClientSize.Width + button2.Width;
+            int dataGrid_X = ClientSize.Width / 2 - dataGridView1.Width / 2;
+            int dataGrid_Y = ClientSize.Height / 2 - dataGridView1.Height / 2;
             int button1_Y = ClientSize.Height / 2 + button1.Height;
             int button2_Y = ClientSize.Height / 2 - button2.Height;
+
 
             //keeps the panel the right size in comparison to whatever the form's size is
             Panel1.Size = new Size(ClientSize.Width * 3, ClientSize.Height);
@@ -90,16 +95,20 @@ namespace WindowsFormsApplication1
             button1.Location = new Point(button1_X, button1_Y);
             button2.Location = new Point(button2_X, button2_Y);
             button4.Location = new Point(ClientSize.Width * 2, 0);
-            dataGridView1.Location = new Point(0, ClientSize.Height - 200);
+            dataGridView1.Location = new Point(dataGrid_X, dataGrid_Y);
         }
 
         private void Form1_SizeChanged(object sender, EventArgs e)
         {
+            dataGridView1.Size = new Size(ClientSize.Width / 2, ClientSize.Height / 2);
+
             //variables to hold the (x, y) location of button 1 and 2
             //division by 2 puts buttons into section 1
             //              width of form / 2    + width of form    - button width / 2
             int button1_X = ClientSize.Width / 2 + ClientSize.Width + button1.Width;
             int button2_X = ClientSize.Width / 2 + ClientSize.Width + button2.Width;
+            int dataGrid_X = ClientSize.Width / 2 - dataGridView1.Width / 2;
+            int dataGrid_Y = ClientSize.Height / 2 - dataGridView1.Height / 2;
             int button1_Y = ClientSize.Height / 2 + button1.Height;
             int button2_Y = ClientSize.Height / 2 - button2.Height;
 
@@ -111,6 +120,7 @@ namespace WindowsFormsApplication1
             button1.Location = new Point(button1_X, button1_Y);
             button2.Location = new Point(button2_X, button2_Y);
             button4.Location = new Point(ClientSize.Width * 2, 0);
+            dataGridView1.Location = new Point(dataGrid_X, dataGrid_Y);
         }
     }
 
