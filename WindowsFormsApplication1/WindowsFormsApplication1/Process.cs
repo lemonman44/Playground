@@ -10,7 +10,7 @@ namespace WindowsFormsApplication1
     {
         int[,] correctArray = new int[100, 100];
         int[] tempArray = new int[100];
-        public void setCorrectArray(int[,] correctArray)
+        public void sortEachRow(int[,] correctArray)
         {
             for (int i = 0; i < 100; i++)
             {

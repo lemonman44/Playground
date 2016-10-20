@@ -31,12 +31,13 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
             object[] temp = new object[100];
-            Button data = new Button();
+            Data data = new Data();
             Process process = new Process();
             pagePosition = 0;
             Panel1.Location = new Point(Panel1.Location.X * pagePosition, 0);
-            data.setArray();
-            process.setCorrectArray(data.getArray());
+            data.populateArray();
+            process.sortEachRow(data.getArray());
+
             for (int i = 0; i < 100; i++)
             {
                 for (int j = 0; j < 100; j++)
