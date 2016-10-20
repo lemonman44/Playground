@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    class Data
+    class Button
     {
         int[,] number_Storage = new int[100, 100];
-        private void setArray()
+        public void setArray()
         {
             Random random = new Random();
           
@@ -18,12 +18,10 @@ namespace WindowsFormsApplication1
                 for (int j = 0; j < 100; j++)
                 {
                     number_Storage[i, j] = random.Next(1, 100);
-                    Console.Write(number_Storage[i, j] + " ");
                 }
-                Console.WriteLine();
             }
         }
-        private object getArray()
+        public int[,] getArray()
         {
             return number_Storage;
         }

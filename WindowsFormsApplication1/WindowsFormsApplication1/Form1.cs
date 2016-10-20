@@ -30,9 +30,22 @@ namespace WindowsFormsApplication1
         //button is on section 1
         private void button1_Click(object sender, EventArgs e)
         {
-            Data data = new Data();
+            object[] temp = new object[100];
+            Button data = new Button();
+            Process process = new Process();
             pagePosition = 0;
             Panel1.Location = new Point(Panel1.Location.X * pagePosition, 0);
+            data.setArray();
+            process.setCorrectArray(data.getArray());
+            for (int i = 0; i < 100; i++)
+            {
+                for (int j = 0; j < 100; j++)
+                {
+                    temp[j] = process.getCorrectArray()[i, j];
+                }
+                dataGridView1.Rows.Add(temp);
+            }
+            
         }
 
         //when 'send data' is clicked, shows section 2 of panel 
@@ -77,6 +90,7 @@ namespace WindowsFormsApplication1
             button1.Location = new Point(button1_X, button1_Y);
             button2.Location = new Point(button2_X, button2_Y);
             button4.Location = new Point(ClientSize.Width * 2, 0);
+            dataGridView1.Location = new Point(0, ClientSize.Height - 200);
         }
 
         private void Form1_SizeChanged(object sender, EventArgs e)
