@@ -28,6 +28,7 @@ namespace WindowsFormsApplication1
 
         //when 'compile/view' is clicked, shows section 0 of panel
         //button is on section 1
+        //formulates data grid after button is clicked
         private void button1_Click(object sender, EventArgs e)
         {
             object[] temp = new object[100];
