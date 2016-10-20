@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1
         //|           |           |           |
         //|-----------|-----------|-----------|
         //the starting part of the panel when application is started is below
-        public int pagePosition = 1;
+        public int pagePosition = 0;
         public Form1()
         {
             InitializeComponent();
@@ -34,8 +34,8 @@ namespace WindowsFormsApplication1
             object[] temp = new object[100];
             Button data = new Button();
             Process process = new Process();
-            pagePosition = 0;
-            Panel1.Location = new Point(Panel1.Location.X * pagePosition, 0);
+            pagePosition = 1;
+            pageSwitch(pagePosition);
             data.setArray();
             process.setCorrectArray(data.getArray());
             for (int i = 0; i < 100; i++)
@@ -54,23 +54,23 @@ namespace WindowsFormsApplication1
         private void button2_Click(object sender, EventArgs e)
         {
             pagePosition = 2;
-            Panel1.Location = new Point(Panel1.Location.X * pagePosition, 0);
+            pageSwitch(pagePosition);
         }
 
         //when 'back' is clicked, shows section 1 of panel
         //button is on section 0
         private void button3_Click(object sender, EventArgs e)
         {
-            pagePosition = 1;
-            Panel1.Location = new Point(-ClientSize.Width, 0);
+            pagePosition = 0;
+            pageSwitch(pagePosition);
         }
 
         //when 'back2' is clicked, shows section 1 of panel
         //button is on section 2
         private void button4_Click(object sender, EventArgs e)
         {
-            pagePosition = 1;
-            Panel1.Location = new Point(-ClientSize.Width, 0);
+            pagePosition = 0;
+            pageSwitch(pagePosition);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -80,8 +80,8 @@ namespace WindowsFormsApplication1
             //variables to hold the (x, y) location of button 1 and 2
             //division by 2 puts the buttons into section 1
             //              width of form / 2    + width of form    - button width / 2
-            int button1_X = ClientSize.Width / 2 + ClientSize.Width + button1.Width;
-            int button2_X = ClientSize.Width / 2 + ClientSize.Width + button2.Width;
+            int button1_X = ClientSize.Width / 2 + button1.Width;
+            int button2_X = ClientSize.Width / 2 + button2.Width;
             int dataGrid_X = ClientSize.Width / 2 - dataGridView1.Width / 2;
             int dataGrid_Y = ClientSize.Height / 2 - dataGridView1.Height / 2;
             int button1_Y = ClientSize.Height / 2 + button1.Height;
@@ -89,13 +89,15 @@ namespace WindowsFormsApplication1
 
 
             //keeps the panel the right size in comparison to whatever the form's size is
-            Panel1.Size = new Size(ClientSize.Width * 3, ClientSize.Height);
-            //keeps the panel in the right location for when form is resized
-            Panel1.Location = new Point(-ClientSize.Width * pagePosition, 0);
+            Panel1.Size = new Size(ClientSize.Width, ClientSize.Height);
+            Panel2.Size = new Size(ClientSize.Width, ClientSize.Height);
+            Panel2.Visible = false;
+            Panel3.Size = new Size(ClientSize.Width, ClientSize.Height);
+            Panel3.Visible = false;
+            
             //keeps buttons in the correct location compared to panel1
             button1.Location = new Point(button1_X, button1_Y);
             button2.Location = new Point(button2_X, button2_Y);
-            button4.Location = new Point(ClientSize.Width * 2, 0);
             dataGridView1.Location = new Point(dataGrid_X, dataGrid_Y);
         }
 
@@ -104,24 +106,46 @@ namespace WindowsFormsApplication1
             dataGridView1.Size = new Size(ClientSize.Width / 2, ClientSize.Height / 2);
 
             //variables to hold the (x, y) location of button 1 and 2
-            //division by 2 puts buttons into section 1
+            //division by 2 puts the buttons into section 1
             //              width of form / 2    + width of form    - button width / 2
-            int button1_X = ClientSize.Width / 2 + ClientSize.Width + button1.Width;
-            int button2_X = ClientSize.Width / 2 + ClientSize.Width + button2.Width;
+            int button1_X = ClientSize.Width / 2 + button1.Width;
+            int button2_X = ClientSize.Width / 2 + button2.Width;
             int dataGrid_X = ClientSize.Width / 2 - dataGridView1.Width / 2;
             int dataGrid_Y = ClientSize.Height / 2 - dataGridView1.Height / 2;
             int button1_Y = ClientSize.Height / 2 + button1.Height;
             int button2_Y = ClientSize.Height / 2 - button2.Height;
 
-            //keeps the panel the right size in comparaison to whatever the form's size is
-            Panel1.Size = new Size(ClientSize.Width * 3, ClientSize.Height);
-            //keeps the panel in the right location for when form is resized
-            Panel1.Location = new Point(-ClientSize.Width * pagePosition, 0);
+
+            //keeps the panel the right size in comparison to whatever the form's size is
+            Panel1.Size = new Size(ClientSize.Width, ClientSize.Height);
+            Panel2.Size = new Size(ClientSize.Width, ClientSize.Height);
+            Panel3.Size = new Size(ClientSize.Width, ClientSize.Height);
+
             //keeps buttons in the correct location compared to panel1
             button1.Location = new Point(button1_X, button1_Y);
             button2.Location = new Point(button2_X, button2_Y);
-            button4.Location = new Point(ClientSize.Width * 2, 0);
             dataGridView1.Location = new Point(dataGrid_X, dataGrid_Y);
+        }
+        private void pageSwitch(int requestPage)
+        {
+            if (requestPage == 0)
+            {
+                Panel1.Visible = true;
+                Panel2.Visible = false;
+                Panel3.Visible = false;
+            }
+            else if (requestPage == 1)
+            {
+                Panel1.Visible = false;
+                Panel2.Visible = true;
+                Panel3.Visible = false;
+            }
+            else if (requestPage == 2)
+            {
+                Panel1.Visible = false;
+                Panel2.Visible = false;
+                Panel3.Visible = true;
+            }
         }
     }
 
