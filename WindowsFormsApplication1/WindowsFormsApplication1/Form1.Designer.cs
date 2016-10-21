@@ -35,8 +35,6 @@ namespace WindowsFormsApplication1
             this.button3 = new System.Windows.Forms.Button();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.Panel2 = new System.Windows.Forms.Panel();
-            this.Panel3 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -138,8 +136,13 @@ namespace WindowsFormsApplication1
             this.Column98 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column99 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column100 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Panel3 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.Panel1.SuspendLayout();
+            this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -183,38 +186,18 @@ namespace WindowsFormsApplication1
             this.Panel1.Location = new System.Drawing.Point(0, 0);
             this.Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(ClientSize.Width, ClientSize.Height);
+            this.Panel1.Size = new System.Drawing.Size(274, 229);
             this.Panel1.TabIndex = 0;
-            //
+            // 
             // Panel2
-            //
+            // 
             this.Panel2.Controls.Add(this.dataGridView1);
             this.Panel2.Controls.Add(this.button3);
             this.Panel2.Location = new System.Drawing.Point(0, 0);
             this.Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(ClientSize.Width, ClientSize.Height);
+            this.Panel2.Size = new System.Drawing.Size(274, 229);
             this.Panel2.TabIndex = 0;
-            //
-            // Panel3
-            //
-            this.Panel3.Controls.Add(this.button4);
-            this.Panel3.Location = new System.Drawing.Point(0, 0);
-            this.Panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(ClientSize.Width, ClientSize.Height);
-            this.Panel3.TabIndex = 0;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 75);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Back2";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // dataGridView1
             // 
@@ -325,8 +308,6 @@ namespace WindowsFormsApplication1
             this.dataGridView1.RowTemplate.Height = 33;
             this.dataGridView1.Size = new System.Drawing.Size(822, 302);
             this.dataGridView1.TabIndex = 4;
-            //this.dataGridView1.DoubleBuffered(true);
-
             // 
             // Column1
             // 
@@ -828,6 +809,35 @@ namespace WindowsFormsApplication1
             this.Column100.HeaderText = "Column100";
             this.Column100.Name = "Column100";
             // 
+            // Panel3
+            // 
+            this.Panel3.Controls.Add(this.checkedListBox1);
+            this.Panel3.Controls.Add(this.button4);
+            this.Panel3.Location = new System.Drawing.Point(0, 0);
+            this.Panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel3.Name = "Panel3";
+            this.Panel3.Size = new System.Drawing.Size(1235, 788);
+            this.Panel3.TabIndex = 0;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(0, 0);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(100, 75);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Back2";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(656, 302);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(120, 82);
+            this.checkedListBox1.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -844,8 +854,8 @@ namespace WindowsFormsApplication1
             this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.Panel1.ResumeLayout(false);
             this.Panel2.ResumeLayout(false);
-            this.Panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -960,6 +970,7 @@ namespace WindowsFormsApplication1
         private System.Windows.Forms.DataGridViewTextBoxColumn Column98;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column99;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column100;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
     }
 }
 
