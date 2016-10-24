@@ -70,6 +70,7 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //code for reading account file and and populating checkboxes
             String accountNameForFillingCheckBoxes;
             try
             {
@@ -83,6 +84,9 @@ namespace WindowsFormsApplication1
             {
                 Console.WriteLine("Not found");
             }
+
+
+
             dataGridView1.Size = new Size(ClientSize.Width / 2, ClientSize.Height / 2);
 
             //variables to hold the (x, y) location of button 1 and 2

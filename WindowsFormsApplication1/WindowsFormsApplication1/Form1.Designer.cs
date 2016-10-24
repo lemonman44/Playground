@@ -139,6 +139,9 @@ namespace WindowsFormsApplication1
             this.Panel3 = new System.Windows.Forms.Panel();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -811,6 +814,9 @@ namespace WindowsFormsApplication1
             // 
             // Panel3
             // 
+            this.Panel3.Controls.Add(this.button7);
+            this.Panel3.Controls.Add(this.button6);
+            this.Panel3.Controls.Add(this.button5);
             this.Panel3.Controls.Add(this.checkedListBox1);
             this.Panel3.Controls.Add(this.button4);
             this.Panel3.Location = new System.Drawing.Point(0, 0);
@@ -839,6 +845,33 @@ namespace WindowsFormsApplication1
             this.button4.Text = "Back2";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // checkAllAccounts
+            // 
+            this.button5.Location = new System.Drawing.Point(656, 273);
+            this.button5.Name = "checkAllAccounts";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "All";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // addAccount
+            // 
+            this.button6.Location = new System.Drawing.Point(738, 273);
+            this.button6.Name = "addAccount";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "+";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // subtractAccount
+            // 
+            this.button7.Location = new System.Drawing.Point(820, 273);
+            this.button7.Name = "subtractAccount";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "-";
+            this.button7.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -973,6 +1006,9 @@ namespace WindowsFormsApplication1
         private System.Windows.Forms.DataGridViewTextBoxColumn Column99;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column100;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
     }
 }
 
