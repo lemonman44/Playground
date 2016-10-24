@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    class Button
+    class FillArray
     {
         int[,] number_Storage = new int[100, 100];
         public void setArray()

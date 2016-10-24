@@ -137,8 +137,8 @@ namespace WindowsFormsApplication1
             this.Column99 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column100 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Panel3 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -819,6 +819,16 @@ namespace WindowsFormsApplication1
             this.Panel3.Size = new System.Drawing.Size(1235, 788);
             this.Panel3.TabIndex = 0;
             // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.CheckOnClick = true;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(656, 302);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(460, 290);
+            this.checkedListBox1.Sorted = true;
+            this.checkedListBox1.TabIndex = 2;
+            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(0, 0);
@@ -829,14 +839,6 @@ namespace WindowsFormsApplication1
             this.button4.Text = "Back2";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(656, 302);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(120, 82);
-            this.checkedListBox1.TabIndex = 2;
             // 
             // Form1
             // 

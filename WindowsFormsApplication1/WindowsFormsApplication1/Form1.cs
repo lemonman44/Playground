@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.IO;
 
 namespace WindowsFormsApplication1
 {
@@ -26,7 +27,7 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
             object[] temp = new object[100];
-            Button data = new Button();
+            FillArray data = new FillArray();
             Process process = new Process();
             pagePosition = 1;
             pageSwitch(pagePosition);
@@ -69,6 +70,19 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            String accountNameForFillingCheckBoxes;
+            try
+            {
+                StreamReader file = new StreamReader("..\\..\\Accounts.txt");
+                while ((accountNameForFillingCheckBoxes = file.ReadLine()) != null)
+                {
+                    checkedListBox1.Items.Add(accountNameForFillingCheckBoxes, false);
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Not found");
+            }
             dataGridView1.Size = new Size(ClientSize.Width / 2, ClientSize.Height / 2);
 
             //variables to hold the (x, y) location of button 1 and 2
