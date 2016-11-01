@@ -68,6 +68,23 @@ namespace WindowsFormsApplication1
             pageSwitch(pagePosition);
         }
 
+        private void send_Click(object sender, EventArgs e)
+        {
+            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
+            if (result == DialogResult.OK) // Test result.
+            {
+                string file = openFileDialog1.FileName;
+                try
+                {
+                    
+                }
+                catch (IOException)
+                {
+                }
+            }
+
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             //code for reading account file and and populating checkboxes
@@ -85,20 +102,22 @@ namespace WindowsFormsApplication1
                 Console.WriteLine("Not found");
             }
 
-
+            
 
             dataGridView1.Size = new Size(ClientSize.Width / 2, ClientSize.Height / 2);
+            checkedListBox1.Size = new Size(ClientSize.Width / 2, ClientSize.Height / 2);
 
             //variables to hold the (x, y) location of button 1 and 2
             //division by 2 puts the buttons into section 1
             //              width of form / 2    + width of form    - button width / 2
             int button1_X = ClientSize.Width / 2 + button1.Width;
             int button2_X = ClientSize.Width / 2 + button2.Width;
-            int dataGrid_X = ClientSize.Width / 2 - dataGridView1.Width / 2;
-            int dataGrid_Y = ClientSize.Height / 2 - dataGridView1.Height / 2;
             int button1_Y = ClientSize.Height / 2 + button1.Height;
             int button2_Y = ClientSize.Height / 2 - button2.Height;
-
+            int dataGrid_X = ClientSize.Width / 2 - dataGridView1.Width / 2;
+            int dataGrid_Y = ClientSize.Height / 2 - dataGridView1.Height / 2;
+            int checkBoxes_X = ClientSize.Width / 2 - checkedListBox1.Width / 2;
+            int checkBoxes_Y = ClientSize.Height / 2 - checkedListBox1.Height / 2;
 
             //keeps the panel the right size in comparison to whatever the form's size is
             Panel1.Size = new Size(ClientSize.Width, ClientSize.Height);
@@ -111,21 +130,35 @@ namespace WindowsFormsApplication1
             button1.Location = new Point(button1_X, button1_Y);
             button2.Location = new Point(button2_X, button2_Y);
             dataGridView1.Location = new Point(dataGrid_X, dataGrid_Y);
+            checkedListBox1.Location = new Point(checkBoxes_X, checkBoxes_Y);
+
+            //sets size for the buttons above the check box list
+            checkAllAccounts.Size = new Size(checkedListBox1.Width / 3, 25);
+            addAccount.Size = new Size(checkedListBox1.Width / 3, 25);
+            subtractAccount.Size = new Size(checkedListBox1.Width / 3, 25);
+
+            //sets location for the buttons above the checkbox list
+            checkAllAccounts.Location = new Point(checkedListBox1.Location.X, checkedListBox1.Location.Y - 25);
+            addAccount.Location = new Point(checkedListBox1.Location.X + checkAllAccounts.Width, checkedListBox1.Location.Y - 25);
+            subtractAccount.Location = new Point(checkedListBox1.Location.X + checkAllAccounts.Width * 2, checkedListBox1.Location.Y - 25);
         }
 
         private void Form1_SizeChanged(object sender, EventArgs e)
         {
             dataGridView1.Size = new Size(ClientSize.Width / 2, ClientSize.Height / 2);
+            checkedListBox1.Size = new Size(ClientSize.Width / 2, ClientSize.Height / 2);
 
             //variables to hold the (x, y) location of button 1 and 2
             //division by 2 puts the buttons into section 1
             //              width of form / 2    + width of form    - button width / 2
             int button1_X = ClientSize.Width / 2 + button1.Width;
             int button2_X = ClientSize.Width / 2 + button2.Width;
-            int dataGrid_X = ClientSize.Width / 2 - dataGridView1.Width / 2;
-            int dataGrid_Y = ClientSize.Height / 2 - dataGridView1.Height / 2;
             int button1_Y = ClientSize.Height / 2 + button1.Height;
             int button2_Y = ClientSize.Height / 2 - button2.Height;
+            int dataGrid_X = ClientSize.Width / 2 - dataGridView1.Width / 2;
+            int dataGrid_Y = ClientSize.Height / 2 - dataGridView1.Height / 2;
+            int checkBoxes_X = ClientSize.Width / 2 - checkedListBox1.Width / 2;
+            int checkBoxes_Y = ClientSize.Height / 2 - checkedListBox1.Height / 2;
 
 
             //keeps the panel the right size in comparison to whatever the form's size is
@@ -137,7 +170,19 @@ namespace WindowsFormsApplication1
             button1.Location = new Point(button1_X, button1_Y);
             button2.Location = new Point(button2_X, button2_Y);
             dataGridView1.Location = new Point(dataGrid_X, dataGrid_Y);
+            checkedListBox1.Location = new Point(checkBoxes_X, checkBoxes_Y);
+
+            //sets size for the buttons above the check box list
+            checkAllAccounts.Size = new Size(checkedListBox1.Width / 3, 25);
+            addAccount.Size = new Size(checkedListBox1.Width / 3, 25);
+            subtractAccount.Size = new Size(checkedListBox1.Width / 3, 25);
+
+            //sets location for the buttons above the checkbox list
+            checkAllAccounts.Location = new Point(checkedListBox1.Location.X, checkedListBox1.Location.Y - 25);
+            addAccount.Location = new Point(checkedListBox1.Location.X + checkAllAccounts.Width, checkedListBox1.Location.Y - 25);
+            subtractAccount.Location = new Point(checkedListBox1.Location.X + checkAllAccounts.Width * 2, checkedListBox1.Location.Y - 25);
         }
+
         private void pageSwitch(int requestPage)
         {
             if (requestPage == 0)
@@ -158,6 +203,21 @@ namespace WindowsFormsApplication1
                 Panel2.Visible = false;
                 Panel3.Visible = true;
             }
+        }
+
+        private void checkAllAccounts_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void addAccount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void subtractAccount_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
