@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.IO;
+using System.Net;
+using System.Net.Mail;
 
 namespace WindowsFormsApplication1
 {
@@ -76,7 +78,41 @@ namespace WindowsFormsApplication1
                 string file = openFileDialog1.FileName;
                 try
                 {
-                    
+                    SmtpClient smtpClient = new SmtpClient();
+                    NetworkCredential basicCredential = new NetworkCredential("AdamLehman2018@gmail.com", "lemonman44");
+                    MailMessage message = new MailMessage();
+                    MailAddress fromAddress = new MailAddress("AdamLehman2018@gmail.com");
+                    smtpClient.EnableSsl = true;
+
+                    smtpClient.Host = "smtp.gmail.com";
+                    smtpClient.UseDefaultCredentials = false;
+                    smtpClient.Credentials = basicCredential;
+
+                    message.From = fromAddress;
+
+                    message.Subject = "attach test";
+                    //Set IsBodyHtml to true means you can send HTML email.
+                    message.IsBodyHtml = true;
+                    message.Body = "<h1>your message body</h1>";
+
+                    Attachment salesReport = new Attachment(file);
+                    message.Attachments.Add(salesReport);
+
+                    message.To.Add("michael.day0621@gmail.com");
+
+
+                    try
+                    {
+                        for (int i = 0; i < 1; i++)
+                        {
+                            smtpClient.Send(message);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        //Error, could not send the message
+                        Console.Write(ex);
+                    }
                 }
                 catch (IOException)
                 {
