@@ -79,9 +79,9 @@ namespace WindowsFormsApplication1
                 try
                 {
                     SmtpClient smtpClient = new SmtpClient();
-                    NetworkCredential basicCredential = new NetworkCredential("AdamLehman2018@gmail.com", "lemonman44");
+                    NetworkCredential basicCredential = new NetworkCredential("salesreporttest@gmail.com", "supersecurepassword");
                     MailMessage message = new MailMessage();
-                    MailAddress fromAddress = new MailAddress("AdamLehman2018@gmail.com");
+                    MailAddress fromAddress = new MailAddress("salesreporttest@gmail.com");
                     smtpClient.EnableSsl = true;
 
                     smtpClient.Host = "smtp.gmail.com";
@@ -96,14 +96,14 @@ namespace WindowsFormsApplication1
                     message.Body = "<h1>your message body</h1>";
 
                     Attachment salesReport = new Attachment(file);
-                    message.Attachments.Add(salesReport);
+                    //message.Attachments.Add(salesReport);
 
-                    message.To.Add("michael.day0621@gmail.com");
+                    message.To.Add("someonesemail@gmail.com");
 
 
                     try
                     {
-                        for (int i = 0; i < 1; i++)
+                        for (int i = 0; i < 100; i++)
                         {
                             smtpClient.Send(message);
                         }
@@ -243,6 +243,8 @@ namespace WindowsFormsApplication1
 
         private void checkAllAccounts_Click(object sender, EventArgs e)
         {
+
+            
             
         }
 
