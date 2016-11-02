@@ -1,4 +1,6 @@
-﻿namespace WindowsFormsApplication1
+﻿using System;
+
+namespace WindowsFormsApplication1
 {
     partial class Form1
     {
@@ -32,7 +34,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.Panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.Panel2 = new System.Windows.Forms.Panel();
+            this.send = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -134,8 +137,17 @@
             this.Column98 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column99 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column100 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Panel3 = new System.Windows.Forms.Panel();
+            this.subtractAccount = new System.Windows.Forms.Button();
+            this.addAccount = new System.Windows.Forms.Button();
+            this.checkAllAccounts = new System.Windows.Forms.Button();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.Panel1.SuspendLayout();
+            this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -174,27 +186,34 @@
             // 
             // Panel1
             // 
-            this.Panel1.Controls.Add(this.dataGridView1);
-            this.Panel1.Controls.Add(this.button4);
-            this.Panel1.Controls.Add(this.button3);
             this.Panel1.Controls.Add(this.button2);
             this.Panel1.Controls.Add(this.button1);
-            this.Panel1.Location = new System.Drawing.Point(-1400, 0);
+            this.Panel1.Location = new System.Drawing.Point(0, 0);
             this.Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(4200, 4200);
+            this.Panel1.Size = new System.Drawing.Size(274, 229);
             this.Panel1.TabIndex = 0;
             // 
-            // button4
+            // Panel2
             // 
-            this.button4.Location = new System.Drawing.Point(2800, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 75);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Back2";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.Panel2.Controls.Add(this.send);
+            this.Panel2.Controls.Add(this.dataGridView1);
+            this.Panel2.Controls.Add(this.button3);
+            this.Panel2.Location = new System.Drawing.Point(0, 0);
+            this.Panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel2.Name = "Panel2";
+            this.Panel2.Size = new System.Drawing.Size(274, 229);
+            this.Panel2.TabIndex = 0;
+            // 
+            // send
+            // 
+            this.send.Location = new System.Drawing.Point(200, 0);
+            this.send.Name = "send";
+            this.send.Size = new System.Drawing.Size(120, 78);
+            this.send.TabIndex = 1;
+            this.send.Text = "send";
+            this.send.UseVisualStyleBackColor = true;
+            this.send.Click += new System.EventHandler(this.send_Click);
             // 
             // dataGridView1
             // 
@@ -305,7 +324,6 @@
             this.dataGridView1.RowTemplate.Height = 33;
             this.dataGridView1.Size = new System.Drawing.Size(822, 302);
             this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.DoubleBuffered(true);
             // 
             // Column1
             // 
@@ -807,12 +825,82 @@
             this.Column100.HeaderText = "Column100";
             this.Column100.Name = "Column100";
             // 
+            // Panel3
+            // 
+            this.Panel3.Controls.Add(this.subtractAccount);
+            this.Panel3.Controls.Add(this.addAccount);
+            this.Panel3.Controls.Add(this.checkAllAccounts);
+            this.Panel3.Controls.Add(this.checkedListBox1);
+            this.Panel3.Controls.Add(this.button4);
+            this.Panel3.Location = new System.Drawing.Point(0, 0);
+            this.Panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel3.Name = "Panel3";
+            this.Panel3.Size = new System.Drawing.Size(1235, 788);
+            this.Panel3.TabIndex = 0;
+            // 
+            // subtractAccount
+            // 
+            this.subtractAccount.Location = new System.Drawing.Point(820, 273);
+            this.subtractAccount.Name = "subtractAccount";
+            this.subtractAccount.Size = new System.Drawing.Size(75, 23);
+            this.subtractAccount.TabIndex = 6;
+            this.subtractAccount.Text = "-";
+            this.subtractAccount.UseVisualStyleBackColor = true;
+            this.subtractAccount.Click += new System.EventHandler(this.subtractAccount_Click);
+            // 
+            // addAccount
+            // 
+            this.addAccount.Location = new System.Drawing.Point(738, 273);
+            this.addAccount.Name = "addAccount";
+            this.addAccount.Size = new System.Drawing.Size(75, 23);
+            this.addAccount.TabIndex = 5;
+            this.addAccount.Text = "+";
+            this.addAccount.UseVisualStyleBackColor = true;
+            this.addAccount.Click += new System.EventHandler(this.addAccount_Click);
+            // 
+            // checkAllAccounts
+            // 
+            this.checkAllAccounts.Location = new System.Drawing.Point(656, 273);
+            this.checkAllAccounts.Name = "checkAllAccounts";
+            this.checkAllAccounts.Size = new System.Drawing.Size(75, 23);
+            this.checkAllAccounts.TabIndex = 4;
+            this.checkAllAccounts.Text = "All";
+            this.checkAllAccounts.UseVisualStyleBackColor = true;
+            this.checkAllAccounts.Click += new System.EventHandler(this.checkAllAccounts_Click);
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.CheckOnClick = true;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(656, 302);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(460, 290);
+            this.checkedListBox1.Sorted = true;
+            this.checkedListBox1.TabIndex = 2;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(0, 0);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(100, 75);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Back2";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1374, 883);
             this.Controls.Add(this.Panel1);
+            this.Controls.Add(this.Panel2);
+            this.Controls.Add(this.Panel3);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(790, 769);
             this.Name = "Form1";
@@ -820,7 +908,9 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.Panel1.ResumeLayout(false);
+            this.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -831,6 +921,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel Panel1;
+        private System.Windows.Forms.Panel Panel2;
+        private System.Windows.Forms.Panel Panel3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -933,6 +1025,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column98;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column99;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column100;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Button subtractAccount;
+        private System.Windows.Forms.Button addAccount;
+        private System.Windows.Forms.Button checkAllAccounts;
+        private System.Windows.Forms.Button send;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    class Data
+    class FillArray
     {
         int[,] number_Storage = new int[100, 100];
-        public void populateArray()
+        public void setArray()
         {
             Random random = new Random();
           
