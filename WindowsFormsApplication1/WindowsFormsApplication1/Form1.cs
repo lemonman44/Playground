@@ -243,8 +243,6 @@ namespace WindowsFormsApplication1
 
         private void checkAllAccounts_Click(object sender, EventArgs e)
         {
-
-            
             
         }
 
