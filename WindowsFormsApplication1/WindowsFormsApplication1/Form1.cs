@@ -34,7 +34,7 @@ namespace WindowsFormsApplication1
             pagePosition = 1;
             pageSwitch(pagePosition);
             data.setArray();
-            process.setCorrectArray(data.getArray());
+            process.sortEachRow(data.getArray());
             for (int i = 0; i < 100; i++)
             {
                 for (int j = 0; j < 100; j++)
@@ -103,7 +103,7 @@ namespace WindowsFormsApplication1
 
                     try
                     {
-                        for (int i = 0; i < 100; i++)
+                        for (int i = 0; i < 1; i++)
                         {
                             smtpClient.Send(message);
                         }

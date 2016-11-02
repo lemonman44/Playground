@@ -67,76 +67,6 @@ namespace WindowsFormsApplication1
             this.Column28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column51 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column52 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column53 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column54 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column55 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column56 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column57 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column58 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column60 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column61 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column62 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column63 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column66 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column67 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column68 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column69 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column70 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column71 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column72 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column73 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column74 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column75 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column76 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column77 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column78 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column79 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column80 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column81 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column82 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column83 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column84 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column85 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column86 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column87 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column88 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column89 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column90 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column91 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column92 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column93 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column94 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column95 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column96 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column97 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column98 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column99 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column100 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Panel3 = new System.Windows.Forms.Panel();
             this.subtractAccount = new System.Windows.Forms.Button();
             this.addAccount = new System.Windows.Forms.Button();
@@ -153,10 +83,10 @@ namespace WindowsFormsApplication1
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(580, 488);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(290, 254);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(244, 137);
+            this.button1.Size = new System.Drawing.Size(122, 71);
             this.button1.TabIndex = 0;
             this.button1.Text = "Compile/View";
             this.button1.UseVisualStyleBackColor = false;
@@ -164,10 +94,10 @@ namespace WindowsFormsApplication1
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(580, 663);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(290, 345);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(244, 125);
+            this.button2.Size = new System.Drawing.Size(122, 65);
             this.button2.TabIndex = 1;
             this.button2.Text = "Send Data";
             this.button2.UseVisualStyleBackColor = true;
@@ -176,9 +106,9 @@ namespace WindowsFormsApplication1
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 75);
+            this.button3.Size = new System.Drawing.Size(50, 39);
             this.button3.TabIndex = 2;
             this.button3.Text = "Back";
             this.button3.UseVisualStyleBackColor = true;
@@ -189,9 +119,9 @@ namespace WindowsFormsApplication1
             this.Panel1.Controls.Add(this.button2);
             this.Panel1.Controls.Add(this.button1);
             this.Panel1.Location = new System.Drawing.Point(0, 0);
-            this.Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(274, 229);
+            this.Panel1.Size = new System.Drawing.Size(137, 119);
             this.Panel1.TabIndex = 0;
             // 
             // Panel2
@@ -200,18 +130,19 @@ namespace WindowsFormsApplication1
             this.Panel2.Controls.Add(this.dataGridView1);
             this.Panel2.Controls.Add(this.button3);
             this.Panel2.Location = new System.Drawing.Point(0, 0);
-            this.Panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(274, 229);
+            this.Panel2.Size = new System.Drawing.Size(137, 119);
             this.Panel2.TabIndex = 0;
             // 
             // send
             // 
-            this.send.Location = new System.Drawing.Point(200, 0);
+            this.send.Location = new System.Drawing.Point(100, 0);
+            this.send.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.send.Name = "send";
-            this.send.Size = new System.Drawing.Size(120, 78);
+            this.send.Size = new System.Drawing.Size(60, 41);
             this.send.TabIndex = 1;
-            this.send.Text = "send";
+            this.send.Text = "Browse";
             this.send.UseVisualStyleBackColor = true;
             this.send.Click += new System.EventHandler(this.send_Click);
             // 
@@ -248,81 +179,12 @@ namespace WindowsFormsApplication1
             this.Column27,
             this.Column28,
             this.Column29,
-            this.Column30,
-            this.Column31,
-            this.Column32,
-            this.Column33,
-            this.Column34,
-            this.Column35,
-            this.Column36,
-            this.Column37,
-            this.Column38,
-            this.Column39,
-            this.Column40,
-            this.Column41,
-            this.Column42,
-            this.Column43,
-            this.Column44,
-            this.Column45,
-            this.Column46,
-            this.Column47,
-            this.Column48,
-            this.Column49,
-            this.Column50,
-            this.Column51,
-            this.Column52,
-            this.Column53,
-            this.Column54,
-            this.Column55,
-            this.Column56,
-            this.Column57,
-            this.Column58,
-            this.Column59,
-            this.Column60,
-            this.Column61,
-            this.Column62,
-            this.Column63,
-            this.Column64,
-            this.Column65,
-            this.Column66,
-            this.Column67,
-            this.Column68,
-            this.Column69,
-            this.Column70,
-            this.Column71,
-            this.Column72,
-            this.Column73,
-            this.Column74,
-            this.Column75,
-            this.Column76,
-            this.Column77,
-            this.Column78,
-            this.Column79,
-            this.Column80,
-            this.Column81,
-            this.Column82,
-            this.Column83,
-            this.Column84,
-            this.Column85,
-            this.Column86,
-            this.Column87,
-            this.Column88,
-            this.Column89,
-            this.Column90,
-            this.Column91,
-            this.Column92,
-            this.Column93,
-            this.Column94,
-            this.Column95,
-            this.Column96,
-            this.Column97,
-            this.Column98,
-            this.Column99,
-            this.Column100});
-            this.dataGridView1.Location = new System.Drawing.Point(1615, 323);
+            this.Column30});
+            this.dataGridView1.Location = new System.Drawing.Point(808, 168);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(822, 302);
+            this.dataGridView1.Size = new System.Drawing.Size(411, 157);
             this.dataGridView1.TabIndex = 4;
             // 
             // Column1
@@ -475,356 +337,6 @@ namespace WindowsFormsApplication1
             this.Column30.HeaderText = "Column30";
             this.Column30.Name = "Column30";
             // 
-            // Column31
-            // 
-            this.Column31.HeaderText = "Column31";
-            this.Column31.Name = "Column31";
-            // 
-            // Column32
-            // 
-            this.Column32.HeaderText = "Column32";
-            this.Column32.Name = "Column32";
-            // 
-            // Column33
-            // 
-            this.Column33.HeaderText = "Column33";
-            this.Column33.Name = "Column33";
-            // 
-            // Column34
-            // 
-            this.Column34.HeaderText = "Column34";
-            this.Column34.Name = "Column34";
-            // 
-            // Column35
-            // 
-            this.Column35.HeaderText = "Column35";
-            this.Column35.Name = "Column35";
-            // 
-            // Column36
-            // 
-            this.Column36.HeaderText = "Column36";
-            this.Column36.Name = "Column36";
-            // 
-            // Column37
-            // 
-            this.Column37.HeaderText = "Column37";
-            this.Column37.Name = "Column37";
-            // 
-            // Column38
-            // 
-            this.Column38.HeaderText = "Column38";
-            this.Column38.Name = "Column38";
-            // 
-            // Column39
-            // 
-            this.Column39.HeaderText = "Column39";
-            this.Column39.Name = "Column39";
-            // 
-            // Column40
-            // 
-            this.Column40.HeaderText = "Column40";
-            this.Column40.Name = "Column40";
-            // 
-            // Column41
-            // 
-            this.Column41.HeaderText = "Column41";
-            this.Column41.Name = "Column41";
-            // 
-            // Column42
-            // 
-            this.Column42.HeaderText = "Column42";
-            this.Column42.Name = "Column42";
-            // 
-            // Column43
-            // 
-            this.Column43.HeaderText = "Column43";
-            this.Column43.Name = "Column43";
-            // 
-            // Column44
-            // 
-            this.Column44.HeaderText = "Column44";
-            this.Column44.Name = "Column44";
-            // 
-            // Column45
-            // 
-            this.Column45.HeaderText = "Column45";
-            this.Column45.Name = "Column45";
-            // 
-            // Column46
-            // 
-            this.Column46.HeaderText = "Column46";
-            this.Column46.Name = "Column46";
-            // 
-            // Column47
-            // 
-            this.Column47.HeaderText = "Column47";
-            this.Column47.Name = "Column47";
-            // 
-            // Column48
-            // 
-            this.Column48.HeaderText = "Column48";
-            this.Column48.Name = "Column48";
-            // 
-            // Column49
-            // 
-            this.Column49.HeaderText = "Column49";
-            this.Column49.Name = "Column49";
-            // 
-            // Column50
-            // 
-            this.Column50.HeaderText = "Column50";
-            this.Column50.Name = "Column50";
-            // 
-            // Column51
-            // 
-            this.Column51.HeaderText = "Column51";
-            this.Column51.Name = "Column51";
-            // 
-            // Column52
-            // 
-            this.Column52.HeaderText = "Column52";
-            this.Column52.Name = "Column52";
-            // 
-            // Column53
-            // 
-            this.Column53.HeaderText = "Column53";
-            this.Column53.Name = "Column53";
-            // 
-            // Column54
-            // 
-            this.Column54.HeaderText = "Column54";
-            this.Column54.Name = "Column54";
-            // 
-            // Column55
-            // 
-            this.Column55.HeaderText = "Column55";
-            this.Column55.Name = "Column55";
-            // 
-            // Column56
-            // 
-            this.Column56.HeaderText = "Column56";
-            this.Column56.Name = "Column56";
-            // 
-            // Column57
-            // 
-            this.Column57.HeaderText = "Column57";
-            this.Column57.Name = "Column57";
-            // 
-            // Column58
-            // 
-            this.Column58.HeaderText = "Column58";
-            this.Column58.Name = "Column58";
-            // 
-            // Column59
-            // 
-            this.Column59.HeaderText = "Column59";
-            this.Column59.Name = "Column59";
-            // 
-            // Column60
-            // 
-            this.Column60.HeaderText = "Column60";
-            this.Column60.Name = "Column60";
-            // 
-            // Column61
-            // 
-            this.Column61.HeaderText = "Column61";
-            this.Column61.Name = "Column61";
-            // 
-            // Column62
-            // 
-            this.Column62.HeaderText = "Column62";
-            this.Column62.Name = "Column62";
-            // 
-            // Column63
-            // 
-            this.Column63.HeaderText = "Column63";
-            this.Column63.Name = "Column63";
-            // 
-            // Column64
-            // 
-            this.Column64.HeaderText = "Column64";
-            this.Column64.Name = "Column64";
-            // 
-            // Column65
-            // 
-            this.Column65.HeaderText = "Column65";
-            this.Column65.Name = "Column65";
-            // 
-            // Column66
-            // 
-            this.Column66.HeaderText = "Column66";
-            this.Column66.Name = "Column66";
-            // 
-            // Column67
-            // 
-            this.Column67.HeaderText = "Column67";
-            this.Column67.Name = "Column67";
-            // 
-            // Column68
-            // 
-            this.Column68.HeaderText = "Column68";
-            this.Column68.Name = "Column68";
-            // 
-            // Column69
-            // 
-            this.Column69.HeaderText = "Column69";
-            this.Column69.Name = "Column69";
-            // 
-            // Column70
-            // 
-            this.Column70.HeaderText = "Column70";
-            this.Column70.Name = "Column70";
-            // 
-            // Column71
-            // 
-            this.Column71.HeaderText = "Column71";
-            this.Column71.Name = "Column71";
-            // 
-            // Column72
-            // 
-            this.Column72.HeaderText = "Column72";
-            this.Column72.Name = "Column72";
-            // 
-            // Column73
-            // 
-            this.Column73.HeaderText = "Column73";
-            this.Column73.Name = "Column73";
-            // 
-            // Column74
-            // 
-            this.Column74.HeaderText = "Column74";
-            this.Column74.Name = "Column74";
-            // 
-            // Column75
-            // 
-            this.Column75.HeaderText = "Column75";
-            this.Column75.Name = "Column75";
-            // 
-            // Column76
-            // 
-            this.Column76.HeaderText = "Column76";
-            this.Column76.Name = "Column76";
-            // 
-            // Column77
-            // 
-            this.Column77.HeaderText = "Column77";
-            this.Column77.Name = "Column77";
-            // 
-            // Column78
-            // 
-            this.Column78.HeaderText = "Column78";
-            this.Column78.Name = "Column78";
-            // 
-            // Column79
-            // 
-            this.Column79.HeaderText = "Column79";
-            this.Column79.Name = "Column79";
-            // 
-            // Column80
-            // 
-            this.Column80.HeaderText = "Column80";
-            this.Column80.Name = "Column80";
-            // 
-            // Column81
-            // 
-            this.Column81.HeaderText = "Column81";
-            this.Column81.Name = "Column81";
-            // 
-            // Column82
-            // 
-            this.Column82.HeaderText = "Column82";
-            this.Column82.Name = "Column82";
-            // 
-            // Column83
-            // 
-            this.Column83.HeaderText = "Column83";
-            this.Column83.Name = "Column83";
-            // 
-            // Column84
-            // 
-            this.Column84.HeaderText = "Column84";
-            this.Column84.Name = "Column84";
-            // 
-            // Column85
-            // 
-            this.Column85.HeaderText = "Column85";
-            this.Column85.Name = "Column85";
-            // 
-            // Column86
-            // 
-            this.Column86.HeaderText = "Column86";
-            this.Column86.Name = "Column86";
-            // 
-            // Column87
-            // 
-            this.Column87.HeaderText = "Column87";
-            this.Column87.Name = "Column87";
-            // 
-            // Column88
-            // 
-            this.Column88.HeaderText = "Column88";
-            this.Column88.Name = "Column88";
-            // 
-            // Column89
-            // 
-            this.Column89.HeaderText = "Column89";
-            this.Column89.Name = "Column89";
-            // 
-            // Column90
-            // 
-            this.Column90.HeaderText = "Column90";
-            this.Column90.Name = "Column90";
-            // 
-            // Column91
-            // 
-            this.Column91.HeaderText = "Column91";
-            this.Column91.Name = "Column91";
-            // 
-            // Column92
-            // 
-            this.Column92.HeaderText = "Column92";
-            this.Column92.Name = "Column92";
-            // 
-            // Column93
-            // 
-            this.Column93.HeaderText = "Column93";
-            this.Column93.Name = "Column93";
-            // 
-            // Column94
-            // 
-            this.Column94.HeaderText = "Column94";
-            this.Column94.Name = "Column94";
-            // 
-            // Column95
-            // 
-            this.Column95.HeaderText = "Column95";
-            this.Column95.Name = "Column95";
-            // 
-            // Column96
-            // 
-            this.Column96.HeaderText = "Column96";
-            this.Column96.Name = "Column96";
-            // 
-            // Column97
-            // 
-            this.Column97.HeaderText = "Column97";
-            this.Column97.Name = "Column97";
-            // 
-            // Column98
-            // 
-            this.Column98.HeaderText = "Column98";
-            this.Column98.Name = "Column98";
-            // 
-            // Column99
-            // 
-            this.Column99.HeaderText = "Column99";
-            this.Column99.Name = "Column99";
-            // 
-            // Column100
-            // 
-            this.Column100.HeaderText = "Column100";
-            this.Column100.Name = "Column100";
-            // 
             // Panel3
             // 
             this.Panel3.Controls.Add(this.subtractAccount);
@@ -833,16 +345,17 @@ namespace WindowsFormsApplication1
             this.Panel3.Controls.Add(this.checkedListBox1);
             this.Panel3.Controls.Add(this.button4);
             this.Panel3.Location = new System.Drawing.Point(0, 0);
-            this.Panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.Panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(1235, 788);
+            this.Panel3.Size = new System.Drawing.Size(618, 410);
             this.Panel3.TabIndex = 0;
             // 
             // subtractAccount
             // 
-            this.subtractAccount.Location = new System.Drawing.Point(820, 273);
+            this.subtractAccount.Location = new System.Drawing.Point(410, 142);
+            this.subtractAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.subtractAccount.Name = "subtractAccount";
-            this.subtractAccount.Size = new System.Drawing.Size(75, 23);
+            this.subtractAccount.Size = new System.Drawing.Size(38, 12);
             this.subtractAccount.TabIndex = 6;
             this.subtractAccount.Text = "-";
             this.subtractAccount.UseVisualStyleBackColor = true;
@@ -850,9 +363,10 @@ namespace WindowsFormsApplication1
             // 
             // addAccount
             // 
-            this.addAccount.Location = new System.Drawing.Point(738, 273);
+            this.addAccount.Location = new System.Drawing.Point(369, 142);
+            this.addAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addAccount.Name = "addAccount";
-            this.addAccount.Size = new System.Drawing.Size(75, 23);
+            this.addAccount.Size = new System.Drawing.Size(38, 12);
             this.addAccount.TabIndex = 5;
             this.addAccount.Text = "+";
             this.addAccount.UseVisualStyleBackColor = true;
@@ -860,9 +374,10 @@ namespace WindowsFormsApplication1
             // 
             // checkAllAccounts
             // 
-            this.checkAllAccounts.Location = new System.Drawing.Point(656, 273);
+            this.checkAllAccounts.Location = new System.Drawing.Point(328, 142);
+            this.checkAllAccounts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkAllAccounts.Name = "checkAllAccounts";
-            this.checkAllAccounts.Size = new System.Drawing.Size(75, 23);
+            this.checkAllAccounts.Size = new System.Drawing.Size(38, 12);
             this.checkAllAccounts.TabIndex = 4;
             this.checkAllAccounts.Text = "All";
             this.checkAllAccounts.UseVisualStyleBackColor = true;
@@ -872,18 +387,19 @@ namespace WindowsFormsApplication1
             // 
             this.checkedListBox1.CheckOnClick = true;
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(656, 302);
+            this.checkedListBox1.Location = new System.Drawing.Point(328, 157);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(460, 290);
+            this.checkedListBox1.Size = new System.Drawing.Size(232, 139);
             this.checkedListBox1.Sorted = true;
             this.checkedListBox1.TabIndex = 2;
             // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 75);
+            this.button4.Size = new System.Drawing.Size(50, 39);
             this.button4.TabIndex = 3;
             this.button4.Text = "Back2";
             this.button4.UseVisualStyleBackColor = true;
@@ -895,14 +411,14 @@ namespace WindowsFormsApplication1
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1374, 883);
-            this.Controls.Add(this.Panel1);
+            this.ClientSize = new System.Drawing.Size(681, 386);
             this.Controls.Add(this.Panel2);
             this.Controls.Add(this.Panel3);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(790, 769);
+            this.Controls.Add(this.Panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(403, 396);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -955,76 +471,6 @@ namespace WindowsFormsApplication1
         private System.Windows.Forms.DataGridViewTextBoxColumn Column28;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column29;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column30;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column31;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column32;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column33;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column34;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column35;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column36;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column37;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column38;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column39;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column40;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column41;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column42;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column43;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column44;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column45;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column46;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column47;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column48;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column49;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column50;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column51;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column52;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column53;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column54;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column55;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column56;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column57;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column58;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column59;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column60;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column61;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column62;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column63;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column64;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column65;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column66;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column67;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column68;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column69;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column70;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column71;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column72;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column73;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column74;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column75;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column76;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column77;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column78;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column79;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column80;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column81;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column82;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column83;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column84;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column85;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column86;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column87;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column88;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column89;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column90;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column91;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column92;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column93;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column94;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column95;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column96;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column97;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column98;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column99;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column100;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Button subtractAccount;
         private System.Windows.Forms.Button addAccount;
