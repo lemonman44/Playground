@@ -64,9 +64,6 @@ namespace WindowsFormsApplication1
             this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Panel3 = new System.Windows.Forms.Panel();
             this.subtractAccount = new System.Windows.Forms.Button();
             this.addAccount = new System.Windows.Forms.Button();
@@ -176,10 +173,7 @@ namespace WindowsFormsApplication1
             this.Column24,
             this.Column25,
             this.Column26,
-            this.Column27,
-            this.Column28,
-            this.Column29,
-            this.Column30});
+            this.Column27,});
             this.dataGridView1.Location = new System.Drawing.Point(808, 168);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
@@ -322,21 +316,6 @@ namespace WindowsFormsApplication1
             this.Column27.HeaderText = "Column27";
             this.Column27.Name = "Column27";
             // 
-            // Column28
-            // 
-            this.Column28.HeaderText = "Column28";
-            this.Column28.Name = "Column28";
-            // 
-            // Column29
-            // 
-            this.Column29.HeaderText = "Column29";
-            this.Column29.Name = "Column29";
-            // 
-            // Column30
-            // 
-            this.Column30.HeaderText = "Column30";
-            this.Column30.Name = "Column30";
-            // 
             // Panel3
             // 
             this.Panel3.Controls.Add(this.subtractAccount);
@@ -468,9 +447,6 @@ namespace WindowsFormsApplication1
         private System.Windows.Forms.DataGridViewTextBoxColumn Column25;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column26;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column27;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column28;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column29;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column30;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Button subtractAccount;
         private System.Windows.Forms.Button addAccount;
