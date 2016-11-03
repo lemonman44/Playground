@@ -264,7 +264,8 @@ namespace WindowsFormsApplication1
 
         private void subtractAccount_Click(object sender, EventArgs e)
         {
-
+            SubtractCheckbox form = new WindowsFormsApplication1.SubtractCheckbox();
+            form.Show();
         }
     }
     }

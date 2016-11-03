@@ -81,7 +81,7 @@ namespace WindowsFormsApplication1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Location = new System.Drawing.Point(290, 254);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 71);
             this.button1.TabIndex = 0;
@@ -92,7 +92,7 @@ namespace WindowsFormsApplication1
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(290, 345);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(122, 65);
             this.button2.TabIndex = 1;
@@ -103,7 +103,7 @@ namespace WindowsFormsApplication1
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(50, 39);
             this.button3.TabIndex = 2;
@@ -116,7 +116,7 @@ namespace WindowsFormsApplication1
             this.Panel1.Controls.Add(this.button2);
             this.Panel1.Controls.Add(this.button1);
             this.Panel1.Location = new System.Drawing.Point(0, 0);
-            this.Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(137, 119);
             this.Panel1.TabIndex = 0;
@@ -127,7 +127,7 @@ namespace WindowsFormsApplication1
             this.Panel2.Controls.Add(this.dataGridView1);
             this.Panel2.Controls.Add(this.button3);
             this.Panel2.Location = new System.Drawing.Point(0, 0);
-            this.Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(137, 119);
             this.Panel2.TabIndex = 0;
@@ -135,7 +135,7 @@ namespace WindowsFormsApplication1
             // send
             // 
             this.send.Location = new System.Drawing.Point(100, 0);
-            this.send.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.send.Margin = new System.Windows.Forms.Padding(2);
             this.send.Name = "send";
             this.send.Size = new System.Drawing.Size(60, 41);
             this.send.TabIndex = 1;
@@ -173,9 +173,9 @@ namespace WindowsFormsApplication1
             this.Column24,
             this.Column25,
             this.Column26,
-            this.Column27,});
+            this.Column27});
             this.dataGridView1.Location = new System.Drawing.Point(808, 168);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 33;
             this.dataGridView1.Size = new System.Drawing.Size(411, 157);
@@ -324,7 +324,7 @@ namespace WindowsFormsApplication1
             this.Panel3.Controls.Add(this.checkedListBox1);
             this.Panel3.Controls.Add(this.button4);
             this.Panel3.Location = new System.Drawing.Point(0, 0);
-            this.Panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Panel3.Margin = new System.Windows.Forms.Padding(2);
             this.Panel3.Name = "Panel3";
             this.Panel3.Size = new System.Drawing.Size(618, 410);
             this.Panel3.TabIndex = 0;
@@ -332,33 +332,33 @@ namespace WindowsFormsApplication1
             // subtractAccount
             // 
             this.subtractAccount.Location = new System.Drawing.Point(410, 142);
-            this.subtractAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.subtractAccount.Margin = new System.Windows.Forms.Padding(2);
             this.subtractAccount.Name = "subtractAccount";
             this.subtractAccount.Size = new System.Drawing.Size(38, 12);
             this.subtractAccount.TabIndex = 6;
-            this.subtractAccount.Text = "-";
+            this.subtractAccount.Text = "Subtract Account";
             this.subtractAccount.UseVisualStyleBackColor = true;
             this.subtractAccount.Click += new System.EventHandler(this.subtractAccount_Click);
             // 
             // addAccount
             // 
             this.addAccount.Location = new System.Drawing.Point(369, 142);
-            this.addAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addAccount.Margin = new System.Windows.Forms.Padding(2);
             this.addAccount.Name = "addAccount";
             this.addAccount.Size = new System.Drawing.Size(38, 12);
             this.addAccount.TabIndex = 5;
-            this.addAccount.Text = "+";
+            this.addAccount.Text = "Add Account";
             this.addAccount.UseVisualStyleBackColor = true;
             this.addAccount.Click += new System.EventHandler(this.addAccount_Click);
             // 
             // checkAllAccounts
             // 
             this.checkAllAccounts.Location = new System.Drawing.Point(328, 142);
-            this.checkAllAccounts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkAllAccounts.Margin = new System.Windows.Forms.Padding(2);
             this.checkAllAccounts.Name = "checkAllAccounts";
             this.checkAllAccounts.Size = new System.Drawing.Size(38, 12);
             this.checkAllAccounts.TabIndex = 4;
-            this.checkAllAccounts.Text = "All";
+            this.checkAllAccounts.Text = "Select All";
             this.checkAllAccounts.UseVisualStyleBackColor = true;
             this.checkAllAccounts.Click += new System.EventHandler(this.checkAllAccounts_Click);
             // 
@@ -367,7 +367,7 @@ namespace WindowsFormsApplication1
             this.checkedListBox1.CheckOnClick = true;
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(328, 157);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(232, 139);
             this.checkedListBox1.Sorted = true;
@@ -376,7 +376,7 @@ namespace WindowsFormsApplication1
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(50, 39);
             this.button4.TabIndex = 3;
@@ -393,10 +393,10 @@ namespace WindowsFormsApplication1
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(681, 386);
-            this.Controls.Add(this.Panel2);
             this.Controls.Add(this.Panel3);
+            this.Controls.Add(this.Panel2);
             this.Controls.Add(this.Panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(403, 396);
             this.Name = "Form1";
             this.Text = "Form1";
