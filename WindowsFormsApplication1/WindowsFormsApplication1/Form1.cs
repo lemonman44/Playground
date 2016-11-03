@@ -259,12 +259,12 @@ namespace WindowsFormsApplication1
         } 
         private void addAccount_Click(object sender, EventArgs e)
         {
-
+            Form2 form2 = new WindowsFormsApplication1.Form2();
+            form2.Show();
         }
 
         private void subtractAccount_Click(object sender, EventArgs e)
         {
-
         }
     }
     }
