@@ -43,7 +43,7 @@ namespace WindowsFormsApplication1
                 }
                 dataGridView1.Rows.Add(temp);
             }
-            
+
         }
 
         //when 'send data' is clicked, shows section 2 of panel 
@@ -138,7 +138,7 @@ namespace WindowsFormsApplication1
                 Console.WriteLine("Not found");
             }
 
-            
+
 
             dataGridView1.Size = new Size(ClientSize.Width / 2, ClientSize.Height / 2);
             checkedListBox1.Size = new Size(ClientSize.Width / 2, ClientSize.Height / 2);
@@ -161,7 +161,7 @@ namespace WindowsFormsApplication1
             Panel2.Visible = false;
             Panel3.Size = new Size(ClientSize.Width, ClientSize.Height);
             Panel3.Visible = false;
-            
+
             //keeps buttons in the correct location compared to panel1
             button1.Location = new Point(button1_X, button1_Y);
             button2.Location = new Point(button2_X, button2_Y);
@@ -243,9 +243,20 @@ namespace WindowsFormsApplication1
 
         private void checkAllAccounts_Click(object sender, EventArgs e)
         {
-            
-        }
+            Boolean IsChecked = false;
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                if (!checkedListBox1.GetItemChecked(i))
+                {
+                    IsChecked = true;
+                }
+            }
 
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                checkedListBox1.SetItemChecked(i, IsChecked);
+            }
+        } 
         private void addAccount_Click(object sender, EventArgs e)
         {
 
@@ -256,5 +267,5 @@ namespace WindowsFormsApplication1
 
         }
     }
+    }
 
-}
