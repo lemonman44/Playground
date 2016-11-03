@@ -31,4 +31,5 @@ namespace WindowsFormsApplication1
                     file.WriteLine("..\\..\\Accounts.txt", Text);
                 }
         }
+    }
 }
