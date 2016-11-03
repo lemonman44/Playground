@@ -3,31 +3,53 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
     class Process
     {
-        int[,] correctArray = new int[100, 100];
-        int[] tempArray = new int[100];
-        public void sortEachRow(int[,] correctArray)
+
+        string file;
+        string storesEachRowAsStringForFurtherParsing;
+        String[] arrayForStoringTheRowsOnlySeperatedNow = new String[27];
+        
+        public void sortEachRow(OpenFileDialog openFileDialog1, DataGridView dataGridView1)
         {
-            for (int i = 0; i < 100; i++)
+            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
+            if (result == DialogResult.OK) // Test result.
             {
-                for (int j = 0; j < 100; j++)
+                file = openFileDialog1.FileName;
+                
+            }
+            try
+            {
+                StreamReader readsTheCSV = new StreamReader(file);
+                while ((storesEachRowAsStringForFurtherParsing = readsTheCSV.ReadLine()) != null)
                 {
-                    tempArray[j] = correctArray[i, j];
+                    int positionInTheString = 0;
+                    for (int i = 0; i < 27; i++)
+                    {
+                        for (; positionInTheString < storesEachRowAsStringForFurtherParsing.Length 
+                            && storesEachRowAsStringForFurtherParsing.ElementAt(positionInTheString) != 44; 
+                            positionInTheString++)
+                        {
+                            arrayForStoringTheRowsOnlySeperatedNow[i] +=
+                                storesEachRowAsStringForFurtherParsing.ElementAt(positionInTheString);
+                        }
+                    }
                 }
-                Array.Sort(tempArray);
-                for (int k = 0; k < 100; k++)
-                {
-                    this.correctArray[i, k] = tempArray[k];
-                }
+
+            }
+            catch
+            {
+                Console.WriteLine("CSV file not found");
             }
         }
-        public int[,] getCorrectArray()
+        public int getCorrectArray()
         {
-            return correctArray;
+            return 5;
         }
     }
 }

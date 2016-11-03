@@ -28,22 +28,10 @@ namespace WindowsFormsApplication1
         //formulates data grid after button is clicked
         private void button1_Click(object sender, EventArgs e)
         {
-            object[] temp = new object[100];
-            FillArray data = new FillArray();
             Process process = new Process();
+            process.sortEachRow(openFileDialog1, dataGridView1);
             pagePosition = 1;
             pageSwitch(pagePosition);
-            data.setArray();
-            process.sortEachRow(data.getArray());
-            for (int i = 0; i < 100; i++)
-            {
-                for (int j = 0; j < 100; j++)
-                {
-                    temp[j] = process.getCorrectArray()[i, j];
-                }
-                dataGridView1.Rows.Add(temp);
-            }
-
         }
 
         //when 'send data' is clicked, shows section 2 of panel 
@@ -72,53 +60,48 @@ namespace WindowsFormsApplication1
 
         private void send_Click(object sender, EventArgs e)
         {
-            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
-            if (result == DialogResult.OK) // Test result.
+            try
             {
-                string file = openFileDialog1.FileName;
+                SmtpClient smtpClient = new SmtpClient();
+                NetworkCredential basicCredential = new NetworkCredential("salesreporttest@gmail.com", "supersecurepassword");
+                MailMessage message = new MailMessage();
+                MailAddress fromAddress = new MailAddress("salesreporttest@gmail.com");
+                smtpClient.EnableSsl = true;
+
+                smtpClient.Host = "smtp.gmail.com";
+                smtpClient.UseDefaultCredentials = false;
+                smtpClient.Credentials = basicCredential;
+
+                message.From = fromAddress;
+
+                message.Subject = "attach test";
+                //Set IsBodyHtml to true means you can send HTML email.
+                message.IsBodyHtml = true;
+                message.Body = "<h1>your message body</h1>";
+
+                //Attachment salesReport = new Attachment(file);
+                //message.Attachments.Add(salesReport);
+
+                message.To.Add("someonesemail@gmail.com");
+
+
                 try
                 {
-                    SmtpClient smtpClient = new SmtpClient();
-                    NetworkCredential basicCredential = new NetworkCredential("salesreporttest@gmail.com", "supersecurepassword");
-                    MailMessage message = new MailMessage();
-                    MailAddress fromAddress = new MailAddress("salesreporttest@gmail.com");
-                    smtpClient.EnableSsl = true;
-
-                    smtpClient.Host = "smtp.gmail.com";
-                    smtpClient.UseDefaultCredentials = false;
-                    smtpClient.Credentials = basicCredential;
-
-                    message.From = fromAddress;
-
-                    message.Subject = "attach test";
-                    //Set IsBodyHtml to true means you can send HTML email.
-                    message.IsBodyHtml = true;
-                    message.Body = "<h1>your message body</h1>";
-
-                    Attachment salesReport = new Attachment(file);
-                    //message.Attachments.Add(salesReport);
-
-                    message.To.Add("someonesemail@gmail.com");
-
-
-                    try
+                    for (int i = 0; i < 1; i++)
                     {
-                        for (int i = 0; i < 1; i++)
-                        {
-                            smtpClient.Send(message);
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        //Error, could not send the message
-                        Console.Write(ex);
+                        smtpClient.Send(message);
                     }
                 }
-                catch (IOException)
+                catch (Exception ex)
                 {
+                    //Error, could not send the message
+                    Console.Write(ex);
                 }
             }
-
+            catch (IOException)
+            {
+            }
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -127,8 +110,8 @@ namespace WindowsFormsApplication1
             String accountNameForFillingCheckBoxes;
             try
             {
-                StreamReader file = new StreamReader("..\\..\\Accounts.txt");
-                while ((accountNameForFillingCheckBoxes = file.ReadLine()) != null)
+                StreamReader readsTheAccountsFile = new StreamReader("..\\..\\Accounts.txt");
+                while ((accountNameForFillingCheckBoxes = readsTheAccountsFile.ReadLine()) != null)
                 {
                     checkedListBox1.Items.Add(accountNameForFillingCheckBoxes, false);
                 }
@@ -138,7 +121,7 @@ namespace WindowsFormsApplication1
                 Console.WriteLine("Not found");
             }
 
-
+            
 
             dataGridView1.Size = new Size(ClientSize.Width / 2, ClientSize.Height / 2);
             checkedListBox1.Size = new Size(ClientSize.Width / 2, ClientSize.Height / 2);
@@ -161,7 +144,7 @@ namespace WindowsFormsApplication1
             Panel2.Visible = false;
             Panel3.Size = new Size(ClientSize.Width, ClientSize.Height);
             Panel3.Visible = false;
-
+            
             //keeps buttons in the correct location compared to panel1
             button1.Location = new Point(button1_X, button1_Y);
             button2.Location = new Point(button2_X, button2_Y);
@@ -243,20 +226,9 @@ namespace WindowsFormsApplication1
 
         private void checkAllAccounts_Click(object sender, EventArgs e)
         {
-            Boolean IsChecked = false;
-            for (int i = 0; i < checkedListBox1.Items.Count; i++)
-            {
-                if (!checkedListBox1.GetItemChecked(i))
-                {
-                    IsChecked = true;
-                }
-            }
+            
+        }
 
-            for (int i = 0; i < checkedListBox1.Items.Count; i++)
-            {
-                checkedListBox1.SetItemChecked(i, IsChecked);
-            }
-        } 
         private void addAccount_Click(object sender, EventArgs e)
         {
             Form2 form2 = new WindowsFormsApplication1.Form2();
@@ -267,5 +239,5 @@ namespace WindowsFormsApplication1
         {
         }
     }
-    }
 
+}
