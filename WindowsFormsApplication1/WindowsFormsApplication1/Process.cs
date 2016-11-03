@@ -38,9 +38,20 @@ namespace WindowsFormsApplication1
                             arrayForStoringTheRowsOnlySeperatedNow[i] +=
                                 storesEachRowAsStringForFurtherParsing.ElementAt(positionInTheString);
                         }
+                        if (storesEachRowAsStringForFurtherParsing.ElementAt(positionInTheString) == 44
+                            && positionInTheString != storesEachRowAsStringForFurtherParsing.Length - 1)
+                        {
+                            positionInTheString++;
+                        }
+                        Console.WriteLine(arrayForStoringTheRowsOnlySeperatedNow[i]);
+                    }
+
+                    dataGridView1.Rows.Add(arrayForStoringTheRowsOnlySeperatedNow);
+                    for (int i = 0; i < 27; i++)
+                    {
+                        arrayForStoringTheRowsOnlySeperatedNow[i] = "";
                     }
                 }
-
             }
             catch
             {
