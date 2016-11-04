@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    class Process
+    class ProcessAndFillDataGrid
     {
 
         string file;

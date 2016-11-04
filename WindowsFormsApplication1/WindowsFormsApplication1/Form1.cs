@@ -28,8 +28,7 @@ namespace WindowsFormsApplication1
         //formulates data grid after button is clicked
         private void button1_Click(object sender, EventArgs e)
         {
-            Process process = new Process();
-            process.sortEachRow(openFileDialog1, dataGridView1);
+            
             pagePosition = 1;
             pageSwitch(pagePosition);
         }
@@ -142,12 +141,14 @@ namespace WindowsFormsApplication1
             addAccount.Size = new Size(checkedListBox1.Width / 3, 25);
             subtractAccount.Size = new Size(checkedListBox1.Width / 3, 25);
             refreshButton.Size = new Size(25, 25);
+            continueToDataGrid.Size = new Size(checkedListBox1.Width - 25, 25);
 
             //sets location for the buttons above the checkbox list
             checkAllAccounts.Location = new Point(checkedListBox1.Location.X, checkedListBox1.Location.Y - 25);
             addAccount.Location = new Point(checkedListBox1.Location.X + checkAllAccounts.Width, checkedListBox1.Location.Y - 25);
             subtractAccount.Location = new Point(checkedListBox1.Location.X + checkAllAccounts.Width * 2, checkedListBox1.Location.Y - 25);
             refreshButton.Location = new Point(checkedListBox1.Location.X, checkedListBox1.Location.Y + checkedListBox1.Height);
+            continueToDataGrid.Location = new Point(checkedListBox1.Location.X + 25, checkedListBox1.Location.Y + checkedListBox1.Height);
         }
 
         private void Form1_SizeChanged(object sender, EventArgs e)
@@ -184,12 +185,14 @@ namespace WindowsFormsApplication1
             addAccount.Size = new Size(checkedListBox1.Width / 3, 25);
             subtractAccount.Size = new Size(checkedListBox1.Width / 3, 25);
             refreshButton.Size = new Size(25, 25);
+            continueToDataGrid.Size = new Size(checkedListBox1.Width - 25, 25);
 
             //sets location for the buttons above the checkbox list
             checkAllAccounts.Location = new Point(checkedListBox1.Location.X, checkedListBox1.Location.Y - 25);
             addAccount.Location = new Point(checkedListBox1.Location.X + checkAllAccounts.Width, checkedListBox1.Location.Y - 25);
             subtractAccount.Location = new Point(checkedListBox1.Location.X + checkAllAccounts.Width * 2, checkedListBox1.Location.Y - 25);
             refreshButton.Location = new Point(checkedListBox1.Location.X, checkedListBox1.Location.Y + checkedListBox1.Height);
+            continueToDataGrid.Location = new Point(checkedListBox1.Location.X + 25, checkedListBox1.Location.Y + checkedListBox1.Height);
         }
 
         private void pageSwitch(int requestPage)
@@ -266,6 +269,13 @@ namespace WindowsFormsApplication1
         private void refreshButton_Click(object sender, EventArgs e)
         {
             fillingTheCheckListAndRefreshingIt();
+        }
+
+        private void continueToDataGrid_Click(object sender, EventArgs e)
+        {
+            ProcessAndFillDataGrid process = new ProcessAndFillDataGrid();
+            process.sortEachRow(openFileDialog1, dataGridView1);
+            pageSwitch(1);
         }
     }
 }

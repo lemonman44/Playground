@@ -72,6 +72,7 @@ namespace WindowsFormsApplication1
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button4 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.continueToDataGrid = new System.Windows.Forms.Button();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -140,7 +141,7 @@ namespace WindowsFormsApplication1
             this.send.Name = "send";
             this.send.Size = new System.Drawing.Size(120, 79);
             this.send.TabIndex = 1;
-            this.send.Text = "Browse";
+            this.send.Text = "Send";
             this.send.UseVisualStyleBackColor = true;
             this.send.Click += new System.EventHandler(this.send_Click);
             // 
@@ -319,6 +320,7 @@ namespace WindowsFormsApplication1
             // 
             // Panel3
             // 
+            this.Panel3.Controls.Add(this.continueToDataGrid);
             this.Panel3.Controls.Add(this.refreshButton);
             this.Panel3.Controls.Add(this.subtractAccount);
             this.Panel3.Controls.Add(this.addAccount);
@@ -400,6 +402,16 @@ namespace WindowsFormsApplication1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // continueToDataGrid
+            // 
+            this.continueToDataGrid.Location = new System.Drawing.Point(1040, 574);
+            this.continueToDataGrid.Name = "continueToDataGrid";
+            this.continueToDataGrid.Size = new System.Drawing.Size(75, 23);
+            this.continueToDataGrid.TabIndex = 8;
+            this.continueToDataGrid.Text = "Continue";
+            this.continueToDataGrid.UseVisualStyleBackColor = true;
+            this.continueToDataGrid.Click += new System.EventHandler(this.continueToDataGrid_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -466,6 +478,7 @@ namespace WindowsFormsApplication1
         private System.Windows.Forms.Button send;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button refreshButton;
+        private System.Windows.Forms.Button continueToDataGrid;
     }
 }
 
