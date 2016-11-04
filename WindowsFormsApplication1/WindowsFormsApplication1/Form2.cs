@@ -13,23 +13,48 @@ namespace WindowsFormsApplication1
 {
     public partial class Form2 : Form
     {
+
+        
+        
+        public string newCompanyName = "";
+
         public Form2()
         {
             InitializeComponent();
+
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
+
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            using (System.IO.StreamWriter file =
-            new System.IO.StreamWriter("..\\..\\Accounts.txt", true))
-                if (e.Equals(13))
+            Console.WriteLine(e.KeyChar);
+            if (e.KeyChar == 13)
+            {
+                try
                 {
-                    file.WriteLine("..\\..\\Accounts.txt", Text);
+                    using (StreamWriter file = File.AppendText("..\\..\\Accounts.txt"))
+                    {
+                        Console.WriteLine("Added a company");
+                        file.WriteLine(newCompanyName);
+                        file.Close();
+                        file.Dispose();
+                    }
+                    
+                    Hide();
                 }
+                catch (Exception g)
+                {
+                    Console.WriteLine(g);
+                }
+            }
+            else
+            {
+                newCompanyName += e.KeyChar.ToString();
+            }
         }
     }
 }

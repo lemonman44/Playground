@@ -21,7 +21,6 @@ namespace WindowsFormsApplication1
             if (result == DialogResult.OK) // Test result.
             {
                 file = openFileDialog1.FileName;
-                
             }
             try
             {
@@ -43,7 +42,7 @@ namespace WindowsFormsApplication1
                         {
                             positionInTheString++;
                         }
-                        Console.WriteLine(arrayForStoringTheRowsOnlySeperatedNow[i]);
+                        
                     }
 
                     dataGridView1.Rows.Add(arrayForStoringTheRowsOnlySeperatedNow);
@@ -57,10 +56,6 @@ namespace WindowsFormsApplication1
             {
                 Console.WriteLine("CSV file not found");
             }
-        }
-        public int getCorrectArray()
-        {
-            return 5;
         }
     }
 }

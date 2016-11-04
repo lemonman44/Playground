@@ -13,6 +13,5 @@ namespace WindowsFormsApplication1
                 BindingFlags.Instance | BindingFlags.NonPublic);
             pi.SetValue(dgv, setting, null);
         }
-
     }
 }

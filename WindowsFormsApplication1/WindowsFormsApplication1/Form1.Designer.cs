@@ -65,6 +65,7 @@ namespace WindowsFormsApplication1
             this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Panel3 = new System.Windows.Forms.Panel();
+            this.refreshButton = new System.Windows.Forms.Button();
             this.subtractAccount = new System.Windows.Forms.Button();
             this.addAccount = new System.Windows.Forms.Button();
             this.checkAllAccounts = new System.Windows.Forms.Button();
@@ -80,10 +81,10 @@ namespace WindowsFormsApplication1
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(290, 254);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(580, 488);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 71);
+            this.button1.Size = new System.Drawing.Size(244, 137);
             this.button1.TabIndex = 0;
             this.button1.Text = "Compile/View";
             this.button1.UseVisualStyleBackColor = false;
@@ -91,10 +92,10 @@ namespace WindowsFormsApplication1
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(290, 345);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(580, 663);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 65);
+            this.button2.Size = new System.Drawing.Size(244, 125);
             this.button2.TabIndex = 1;
             this.button2.Text = "Send Data";
             this.button2.UseVisualStyleBackColor = true;
@@ -103,9 +104,9 @@ namespace WindowsFormsApplication1
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(50, 39);
+            this.button3.Size = new System.Drawing.Size(100, 75);
             this.button3.TabIndex = 2;
             this.button3.Text = "Back";
             this.button3.UseVisualStyleBackColor = true;
@@ -116,9 +117,9 @@ namespace WindowsFormsApplication1
             this.Panel1.Controls.Add(this.button2);
             this.Panel1.Controls.Add(this.button1);
             this.Panel1.Location = new System.Drawing.Point(0, 0);
-            this.Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(137, 119);
+            this.Panel1.Size = new System.Drawing.Size(274, 229);
             this.Panel1.TabIndex = 0;
             // 
             // Panel2
@@ -127,17 +128,17 @@ namespace WindowsFormsApplication1
             this.Panel2.Controls.Add(this.dataGridView1);
             this.Panel2.Controls.Add(this.button3);
             this.Panel2.Location = new System.Drawing.Point(0, 0);
-            this.Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(137, 119);
+            this.Panel2.Size = new System.Drawing.Size(274, 229);
             this.Panel2.TabIndex = 0;
             // 
             // send
             // 
-            this.send.Location = new System.Drawing.Point(100, 0);
-            this.send.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.send.Location = new System.Drawing.Point(200, 0);
+            this.send.Margin = new System.Windows.Forms.Padding(4);
             this.send.Name = "send";
-            this.send.Size = new System.Drawing.Size(60, 41);
+            this.send.Size = new System.Drawing.Size(120, 79);
             this.send.TabIndex = 1;
             this.send.Text = "Browse";
             this.send.UseVisualStyleBackColor = true;
@@ -173,12 +174,12 @@ namespace WindowsFormsApplication1
             this.Column24,
             this.Column25,
             this.Column26,
-            this.Column27,});
-            this.dataGridView1.Location = new System.Drawing.Point(808, 168);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Column27});
+            this.dataGridView1.Location = new System.Drawing.Point(1616, 323);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(411, 157);
+            this.dataGridView1.Size = new System.Drawing.Size(822, 302);
             this.dataGridView1.TabIndex = 4;
             // 
             // Column1
@@ -318,23 +319,34 @@ namespace WindowsFormsApplication1
             // 
             // Panel3
             // 
+            this.Panel3.Controls.Add(this.refreshButton);
             this.Panel3.Controls.Add(this.subtractAccount);
             this.Panel3.Controls.Add(this.addAccount);
             this.Panel3.Controls.Add(this.checkAllAccounts);
             this.Panel3.Controls.Add(this.checkedListBox1);
             this.Panel3.Controls.Add(this.button4);
             this.Panel3.Location = new System.Drawing.Point(0, 0);
-            this.Panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Panel3.Margin = new System.Windows.Forms.Padding(4);
             this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(618, 410);
+            this.Panel3.Size = new System.Drawing.Size(1236, 788);
             this.Panel3.TabIndex = 0;
+            // 
+            // refreshButton
+            // 
+            this.refreshButton.Location = new System.Drawing.Point(656, 574);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(25, 25);
+            this.refreshButton.TabIndex = 7;
+            this.refreshButton.Text = "re";
+            this.refreshButton.UseVisualStyleBackColor = true;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // subtractAccount
             // 
-            this.subtractAccount.Location = new System.Drawing.Point(410, 142);
-            this.subtractAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.subtractAccount.Location = new System.Drawing.Point(820, 273);
+            this.subtractAccount.Margin = new System.Windows.Forms.Padding(4);
             this.subtractAccount.Name = "subtractAccount";
-            this.subtractAccount.Size = new System.Drawing.Size(38, 12);
+            this.subtractAccount.Size = new System.Drawing.Size(76, 23);
             this.subtractAccount.TabIndex = 6;
             this.subtractAccount.Text = "-";
             this.subtractAccount.UseVisualStyleBackColor = true;
@@ -342,10 +354,10 @@ namespace WindowsFormsApplication1
             // 
             // addAccount
             // 
-            this.addAccount.Location = new System.Drawing.Point(369, 142);
-            this.addAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addAccount.Location = new System.Drawing.Point(738, 273);
+            this.addAccount.Margin = new System.Windows.Forms.Padding(4);
             this.addAccount.Name = "addAccount";
-            this.addAccount.Size = new System.Drawing.Size(38, 12);
+            this.addAccount.Size = new System.Drawing.Size(76, 23);
             this.addAccount.TabIndex = 5;
             this.addAccount.Text = "+";
             this.addAccount.UseVisualStyleBackColor = true;
@@ -353,10 +365,10 @@ namespace WindowsFormsApplication1
             // 
             // checkAllAccounts
             // 
-            this.checkAllAccounts.Location = new System.Drawing.Point(328, 142);
-            this.checkAllAccounts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkAllAccounts.Location = new System.Drawing.Point(656, 273);
+            this.checkAllAccounts.Margin = new System.Windows.Forms.Padding(4);
             this.checkAllAccounts.Name = "checkAllAccounts";
-            this.checkAllAccounts.Size = new System.Drawing.Size(38, 12);
+            this.checkAllAccounts.Size = new System.Drawing.Size(76, 23);
             this.checkAllAccounts.TabIndex = 4;
             this.checkAllAccounts.Text = "All";
             this.checkAllAccounts.UseVisualStyleBackColor = true;
@@ -366,19 +378,19 @@ namespace WindowsFormsApplication1
             // 
             this.checkedListBox1.CheckOnClick = true;
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(328, 157);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBox1.Location = new System.Drawing.Point(656, 302);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(232, 139);
+            this.checkedListBox1.Size = new System.Drawing.Size(460, 264);
             this.checkedListBox1.Sorted = true;
             this.checkedListBox1.TabIndex = 2;
             // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(50, 39);
+            this.button4.Size = new System.Drawing.Size(100, 75);
             this.button4.TabIndex = 3;
             this.button4.Text = "Back2";
             this.button4.UseVisualStyleBackColor = true;
@@ -390,14 +402,14 @@ namespace WindowsFormsApplication1
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 386);
+            this.ClientSize = new System.Drawing.Size(1362, 742);
             this.Controls.Add(this.Panel2);
             this.Controls.Add(this.Panel3);
             this.Controls.Add(this.Panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MinimumSize = new System.Drawing.Size(403, 396);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(780, 696);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -453,6 +465,7 @@ namespace WindowsFormsApplication1
         private System.Windows.Forms.Button checkAllAccounts;
         private System.Windows.Forms.Button send;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button refreshButton;
     }
 }
 

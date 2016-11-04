@@ -82,7 +82,7 @@ namespace WindowsFormsApplication1
                 //Attachment salesReport = new Attachment(file);
                 //message.Attachments.Add(salesReport);
 
-                message.To.Add("someonesemail@gmail.com");
+                message.To.Add("cgerstner16@northlandcaps.org");
 
 
                 try
@@ -106,22 +106,8 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //code for reading account file and and populating checkboxes
-            String accountNameForFillingCheckBoxes;
-            try
-            {
-                StreamReader readsTheAccountsFile = new StreamReader("..\\..\\Accounts.txt");
-                while ((accountNameForFillingCheckBoxes = readsTheAccountsFile.ReadLine()) != null)
-                {
-                    checkedListBox1.Items.Add(accountNameForFillingCheckBoxes, false);
-                }
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Not found");
-            }
-
             
+            fillingTheCheckListAndRefreshingIt();
 
             dataGridView1.Size = new Size(ClientSize.Width / 2, ClientSize.Height / 2);
             checkedListBox1.Size = new Size(ClientSize.Width / 2, ClientSize.Height / 2);
@@ -151,15 +137,17 @@ namespace WindowsFormsApplication1
             dataGridView1.Location = new Point(dataGrid_X, dataGrid_Y);
             checkedListBox1.Location = new Point(checkBoxes_X, checkBoxes_Y);
 
-            //sets size for the buttons above the check box list
+            //sets size for the buttons above and below the check box list
             checkAllAccounts.Size = new Size(checkedListBox1.Width / 3, 25);
             addAccount.Size = new Size(checkedListBox1.Width / 3, 25);
             subtractAccount.Size = new Size(checkedListBox1.Width / 3, 25);
+            refreshButton.Size = new Size(25, 25);
 
             //sets location for the buttons above the checkbox list
             checkAllAccounts.Location = new Point(checkedListBox1.Location.X, checkedListBox1.Location.Y - 25);
             addAccount.Location = new Point(checkedListBox1.Location.X + checkAllAccounts.Width, checkedListBox1.Location.Y - 25);
             subtractAccount.Location = new Point(checkedListBox1.Location.X + checkAllAccounts.Width * 2, checkedListBox1.Location.Y - 25);
+            refreshButton.Location = new Point(checkedListBox1.Location.X, checkedListBox1.Location.Y + checkedListBox1.Height);
         }
 
         private void Form1_SizeChanged(object sender, EventArgs e)
@@ -195,11 +183,13 @@ namespace WindowsFormsApplication1
             checkAllAccounts.Size = new Size(checkedListBox1.Width / 3, 25);
             addAccount.Size = new Size(checkedListBox1.Width / 3, 25);
             subtractAccount.Size = new Size(checkedListBox1.Width / 3, 25);
+            refreshButton.Size = new Size(25, 25);
 
             //sets location for the buttons above the checkbox list
             checkAllAccounts.Location = new Point(checkedListBox1.Location.X, checkedListBox1.Location.Y - 25);
             addAccount.Location = new Point(checkedListBox1.Location.X + checkAllAccounts.Width, checkedListBox1.Location.Y - 25);
             subtractAccount.Location = new Point(checkedListBox1.Location.X + checkAllAccounts.Width * 2, checkedListBox1.Location.Y - 25);
+            refreshButton.Location = new Point(checkedListBox1.Location.X, checkedListBox1.Location.Y + checkedListBox1.Height);
         }
 
         private void pageSwitch(int requestPage)
@@ -226,18 +216,56 @@ namespace WindowsFormsApplication1
 
         private void checkAllAccounts_Click(object sender, EventArgs e)
         {
-            
+            bool checkAndUncheckAll = false;
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                if (!checkedListBox1.GetItemChecked(i))
+                {
+                    checkAndUncheckAll = true;
+                }
+            }
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                checkedListBox1.SetItemChecked(i, checkAndUncheckAll);
+            }
         }
 
         private void addAccount_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new WindowsFormsApplication1.Form2();
+            Form2 form2 = new Form2();
             form2.Show();
         }
 
         private void subtractAccount_Click(object sender, EventArgs e)
         {
+            Form3 form3 = new Form3();
+            form3.Show();
+        }
+
+        public void fillingTheCheckListAndRefreshingIt()
+        {
+            //code for reading account file and and populating checkboxes
+            string accountNameForFillingCheckBoxes;
+            checkedListBox1.Items.Clear();
+            try
+            {
+                using (StreamReader readsTheAccountsFile = new StreamReader("..\\..\\Accounts.txt"))
+                {
+                    while ((accountNameForFillingCheckBoxes = readsTheAccountsFile.ReadLine()) != null)
+                    {
+                        checkedListBox1.Items.Add(accountNameForFillingCheckBoxes, false);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Not found");
+            }
+        }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            fillingTheCheckListAndRefreshingIt();
         }
     }
-
 }
