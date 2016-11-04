@@ -233,18 +233,21 @@ namespace WindowsFormsApplication1
             }
         }
 
+        //button used for addition of accounts
         private void addAccount_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
             form2.Show();
         }
 
+        //button used for deletion of accounts
         private void subtractAccount_Click(object sender, EventArgs e)
         {
             Form3 form3 = new Form3();
             form3.Show();
         }
 
+        //button used for refreshing of accounts
         public void fillingTheCheckListAndRefreshingIt()
         {
             //code for reading account file and and populating checkboxes
