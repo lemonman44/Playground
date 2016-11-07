@@ -28,22 +28,9 @@ namespace WindowsFormsApplication1
         //formulates data grid after button is clicked
         private void button1_Click(object sender, EventArgs e)
         {
-            object[] temp = new object[100];
-            FillArray data = new FillArray();
-            Process process = new Process();
+            
             pagePosition = 1;
             pageSwitch(pagePosition);
-            data.setArray();
-            process.sortEachRow(data.getArray());
-            for (int i = 0; i < 100; i++)
-            {
-                for (int j = 0; j < 100; j++)
-                {
-                    temp[j] = process.getCorrectArray()[i, j];
-                }
-                dataGridView1.Rows.Add(temp);
-            }
-
         }
 
         //when 'send data' is clicked, shows section 2 of panel 
@@ -72,73 +59,54 @@ namespace WindowsFormsApplication1
 
         private void send_Click(object sender, EventArgs e)
         {
-            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
-            if (result == DialogResult.OK) // Test result.
+            try
             {
-                string file = openFileDialog1.FileName;
+                SmtpClient smtpClient = new SmtpClient();
+                NetworkCredential basicCredential = new NetworkCredential("salesreporttest@gmail.com", "supersecurepassword");
+                MailMessage message = new MailMessage();
+                MailAddress fromAddress = new MailAddress("salesreporttest@gmail.com");
+                smtpClient.EnableSsl = true;
+
+                smtpClient.Host = "smtp.gmail.com";
+                smtpClient.UseDefaultCredentials = false;
+                smtpClient.Credentials = basicCredential;
+
+                message.From = fromAddress;
+
+                message.Subject = "attach test";
+                //Set IsBodyHtml to true means you can send HTML email.
+                message.IsBodyHtml = true;
+                message.Body = "<h1>your message body</h1>";
+
+                //Attachment salesReport = new Attachment(file);
+                //message.Attachments.Add(salesReport);
+
+                message.To.Add("cgerstner16@northlandcaps.org");
+
+
                 try
                 {
-                    SmtpClient smtpClient = new SmtpClient();
-                    NetworkCredential basicCredential = new NetworkCredential("salesreporttest@gmail.com", "supersecurepassword");
-                    MailMessage message = new MailMessage();
-                    MailAddress fromAddress = new MailAddress("salesreporttest@gmail.com");
-                    smtpClient.EnableSsl = true;
-
-                    smtpClient.Host = "smtp.gmail.com";
-                    smtpClient.UseDefaultCredentials = false;
-                    smtpClient.Credentials = basicCredential;
-
-                    message.From = fromAddress;
-
-                    message.Subject = "attach test";
-                    //Set IsBodyHtml to true means you can send HTML email.
-                    message.IsBodyHtml = true;
-                    message.Body = "<h1>your message body</h1>";
-
-                    Attachment salesReport = new Attachment(file);
-                    //message.Attachments.Add(salesReport);
-
-                    message.To.Add("someonesemail@gmail.com");
-
-
-                    try
+                    for (int i = 0; i < 1; i++)
                     {
-                        for (int i = 0; i < 1; i++)
-                        {
-                            smtpClient.Send(message);
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        //Error, could not send the message
-                        Console.Write(ex);
+                        smtpClient.Send(message);
                     }
                 }
-                catch (IOException)
+                catch (Exception ex)
                 {
+                    //Error, could not send the message
+                    Console.Write(ex);
                 }
             }
-
+            catch (IOException)
+            {
+            }
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //code for reading account file and and populating checkboxes
-            String accountNameForFillingCheckBoxes;
-            try
-            {
-                StreamReader file = new StreamReader("..\\..\\Accounts.txt");
-                while ((accountNameForFillingCheckBoxes = file.ReadLine()) != null)
-                {
-                    checkedListBox1.Items.Add(accountNameForFillingCheckBoxes, false);
-                }
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Not found");
-            }
-
-
+            
+            fillingTheCheckListAndRefreshingIt();
 
             dataGridView1.Size = new Size(ClientSize.Width / 2, ClientSize.Height / 2);
             checkedListBox1.Size = new Size(ClientSize.Width / 2, ClientSize.Height / 2);
@@ -161,22 +129,26 @@ namespace WindowsFormsApplication1
             Panel2.Visible = false;
             Panel3.Size = new Size(ClientSize.Width, ClientSize.Height);
             Panel3.Visible = false;
-
+            
             //keeps buttons in the correct location compared to panel1
             button1.Location = new Point(button1_X, button1_Y);
             button2.Location = new Point(button2_X, button2_Y);
             dataGridView1.Location = new Point(dataGrid_X, dataGrid_Y);
             checkedListBox1.Location = new Point(checkBoxes_X, checkBoxes_Y);
 
-            //sets size for the buttons above the check box list
+            //sets size for the buttons above and below the check box list
             checkAllAccounts.Size = new Size(checkedListBox1.Width / 3, 25);
             addAccount.Size = new Size(checkedListBox1.Width / 3, 25);
             subtractAccount.Size = new Size(checkedListBox1.Width / 3, 25);
+            refreshButton.Size = new Size(25, 25);
+            continueToDataGrid.Size = new Size(checkedListBox1.Width - 25, 25);
 
             //sets location for the buttons above the checkbox list
             checkAllAccounts.Location = new Point(checkedListBox1.Location.X, checkedListBox1.Location.Y - 25);
             addAccount.Location = new Point(checkedListBox1.Location.X + checkAllAccounts.Width, checkedListBox1.Location.Y - 25);
             subtractAccount.Location = new Point(checkedListBox1.Location.X + checkAllAccounts.Width * 2, checkedListBox1.Location.Y - 25);
+            refreshButton.Location = new Point(checkedListBox1.Location.X, checkedListBox1.Location.Y + checkedListBox1.Height);
+            continueToDataGrid.Location = new Point(checkedListBox1.Location.X + 25, checkedListBox1.Location.Y + checkedListBox1.Height);
         }
 
         private void Form1_SizeChanged(object sender, EventArgs e)
@@ -212,11 +184,15 @@ namespace WindowsFormsApplication1
             checkAllAccounts.Size = new Size(checkedListBox1.Width / 3, 25);
             addAccount.Size = new Size(checkedListBox1.Width / 3, 25);
             subtractAccount.Size = new Size(checkedListBox1.Width / 3, 25);
+            refreshButton.Size = new Size(25, 25);
+            continueToDataGrid.Size = new Size(checkedListBox1.Width - 25, 25);
 
             //sets location for the buttons above the checkbox list
             checkAllAccounts.Location = new Point(checkedListBox1.Location.X, checkedListBox1.Location.Y - 25);
             addAccount.Location = new Point(checkedListBox1.Location.X + checkAllAccounts.Width, checkedListBox1.Location.Y - 25);
             subtractAccount.Location = new Point(checkedListBox1.Location.X + checkAllAccounts.Width * 2, checkedListBox1.Location.Y - 25);
+            refreshButton.Location = new Point(checkedListBox1.Location.X, checkedListBox1.Location.Y + checkedListBox1.Height);
+            continueToDataGrid.Location = new Point(checkedListBox1.Location.X + 25, checkedListBox1.Location.Y + checkedListBox1.Height);
         }
 
         private void pageSwitch(int requestPage)
@@ -243,30 +219,66 @@ namespace WindowsFormsApplication1
 
         private void checkAllAccounts_Click(object sender, EventArgs e)
         {
-            Boolean IsChecked = false;
+            bool checkAndUncheckAll = false;
             for (int i = 0; i < checkedListBox1.Items.Count; i++)
             {
                 if (!checkedListBox1.GetItemChecked(i))
                 {
-                    IsChecked = true;
+                    checkAndUncheckAll = true;
                 }
             }
-
             for (int i = 0; i < checkedListBox1.Items.Count; i++)
             {
-                checkedListBox1.SetItemChecked(i, IsChecked);
+                checkedListBox1.SetItemChecked(i, checkAndUncheckAll);
             }
-        } 
+        }
+
+        //button used for addition of accounts
         private void addAccount_Click(object sender, EventArgs e)
         {
-
+            Form2 form2 = new Form2();
+            form2.Show();
         }
 
+        //button used for deletion of accounts
         private void subtractAccount_Click(object sender, EventArgs e)
         {
-            SubtractCheckbox form = new WindowsFormsApplication1.SubtractCheckbox();
-            form.Show();
+            Form3 form3 = new Form3();
+            form3.Show();
+        }
+
+        //button used for refreshing of accounts
+        public void fillingTheCheckListAndRefreshingIt()
+        {
+            //code for reading account file and and populating checkboxes
+            string accountNameForFillingCheckBoxes;
+            checkedListBox1.Items.Clear();
+            try
+            {
+                using (StreamReader readsTheAccountsFile = new StreamReader("..\\..\\Accounts.txt"))
+                {
+                    while ((accountNameForFillingCheckBoxes = readsTheAccountsFile.ReadLine()) != null)
+                    {
+                        checkedListBox1.Items.Add(accountNameForFillingCheckBoxes, false);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Not found");
+            }
+        }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            fillingTheCheckListAndRefreshingIt();
+        }
+
+        private void continueToDataGrid_Click(object sender, EventArgs e)
+        {
+            ProcessAndFillDataGrid process = new ProcessAndFillDataGrid();
+            process.sortEachRow(openFileDialog1, dataGridView1);
+            pageSwitch(1);
         }
     }
-    }
-
+}
